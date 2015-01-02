@@ -1,0 +1,574 @@
+{
+  "name": "bower-install",
+  "main": "./index",
+  "version": "0.2.4",
+  "private": true,
+  "description": "Automatically install and save any missing bower components being used in the current bower.json file",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gdi2290/atom-bower-install"
+  },
+  "license": "MIT",
+  "activationEvents": [
+    "bower-install:save",
+    "bower-install:save-dev"
+  ],
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "remove-element": "0.0.0",
+    "safe-json-parse": "~1.0.1",
+    "resolve": "~0.6.1",
+    "coffee-script": "~1.7.1",
+    "ansi-html-stream": "0.0.3",
+    "detective": "~2.4.0",
+    "findup": "~0.1.3",
+    "underscore": "~1.6.0",
+    "htmlparser2": "~3.5.1"
+  },
+  "readme": "# bower-install package\n\nA short description of your package.\n\n![A screenshot of your spankin' package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/gdi2290/atom-bower-install/issues"
+  },
+  "homepage": "https://github.com/gdi2290/atom-bower-install",
+  "_id": "bower-install@0.2.4",
+  "dist": {
+    "shasum": "a7b558c007ece5867b859d5eff9e6ab5a35d7475"
+  },
+  "_resolved": "/private/var/folders/dy/fk5gyc5d26d9c6yt64s4ckz80000gn/T/d-11502-2401-1uo7gs8/package.tgz",
+  "_from": "/private/var/folders/dy/fk5gyc5d26d9c6yt64s4ckz80000gn/T/d-11502-2401-1uo7gs8/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "ansi-html-stream",
+        "version": "0.0.3",
+        "path": "node_modules/ansi-html-stream/index.js"
+      },
+      {
+        "name": "clone",
+        "version": "0.1.6",
+        "path": "node_modules/ansi-html-stream/node_modules/clone/clone.js"
+      },
+      {
+        "name": "escape-html",
+        "version": "0.0.1",
+        "path": "node_modules/ansi-html-stream/node_modules/escape-html/index.js"
+      },
+      {
+        "name": "map-stream",
+        "version": "0.0.5",
+        "path": "node_modules/ansi-html-stream/node_modules/map-stream/index.js"
+      },
+      {
+        "name": "special-html",
+        "version": "0.0.1",
+        "path": "node_modules/ansi-html-stream/node_modules/special-html/index.js"
+      },
+      {
+        "name": "split",
+        "version": "0.1.2",
+        "path": "node_modules/ansi-html-stream/node_modules/split/index.js"
+      },
+      {
+        "name": "through",
+        "version": "1.1.2",
+        "path": "node_modules/ansi-html-stream/node_modules/split/node_modules/through/index.js"
+      },
+      {
+        "name": "xtend",
+        "version": "1.0.3",
+        "path": "node_modules/ansi-html-stream/node_modules/xtend/index.js"
+      },
+      {
+        "name": "coffee-script",
+        "version": "1.7.1",
+        "path": "node_modules/coffee-script/lib/coffee-script/coffee-script.js"
+      },
+      {
+        "name": "mkdirp",
+        "version": "0.3.5",
+        "path": "node_modules/coffee-script/node_modules/mkdirp/index.js"
+      },
+      {
+        "name": "detective",
+        "version": "2.4.1",
+        "path": "node_modules/detective/index.js"
+      },
+      {
+        "name": "escodegen",
+        "version": "1.1.0",
+        "path": "node_modules/detective/node_modules/escodegen/escodegen.js"
+      },
+      {
+        "name": "esprima",
+        "version": "1.0.4",
+        "path": "node_modules/detective/node_modules/escodegen/node_modules/esprima/esprima.js"
+      },
+      {
+        "name": "estraverse",
+        "version": "1.5.1",
+        "path": "node_modules/detective/node_modules/escodegen/node_modules/estraverse/estraverse.js"
+      },
+      {
+        "name": "esutils",
+        "version": "1.0.0",
+        "path": "node_modules/detective/node_modules/escodegen/node_modules/esutils/lib/utils.js"
+      },
+      {
+        "name": "source-map",
+        "version": "0.1.42",
+        "path": "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map.js"
+      },
+      {
+        "name": "amdefine",
+        "version": "0.1.0",
+        "path": "node_modules/detective/node_modules/escodegen/node_modules/source-map/node_modules/amdefine/amdefine.js"
+      },
+      {
+        "name": "esprima-six",
+        "version": "0.0.3",
+        "path": "node_modules/detective/node_modules/esprima-six/esprima.js"
+      },
+      {
+        "name": "findup",
+        "version": "0.1.5",
+        "path": "node_modules/findup/index.js"
+      },
+      {
+        "name": "colors",
+        "version": "0.6.2",
+        "path": "node_modules/findup/node_modules/colors/colors.js"
+      },
+      {
+        "name": "commander",
+        "version": "2.1.0",
+        "path": "node_modules/findup/node_modules/commander/index.js"
+      },
+      {
+        "name": "htmlparser2",
+        "version": "3.5.1",
+        "path": "node_modules/htmlparser2/lib/index.js"
+      },
+      {
+        "name": "domelementtype",
+        "version": "1.1.3",
+        "path": "node_modules/htmlparser2/node_modules/domelementtype/index.js"
+      },
+      {
+        "name": "domhandler",
+        "version": "2.2.1",
+        "path": "node_modules/htmlparser2/node_modules/domhandler/index.js"
+      },
+      {
+        "name": "domutils",
+        "version": "1.3.0",
+        "path": "node_modules/htmlparser2/node_modules/domutils/index.js"
+      },
+      {
+        "name": "readable-stream",
+        "version": "1.1.13",
+        "path": "node_modules/htmlparser2/node_modules/readable-stream/readable.js"
+      },
+      {
+        "name": "core-util-is",
+        "version": "1.0.1",
+        "path": "node_modules/htmlparser2/node_modules/readable-stream/node_modules/core-util-is/lib/util.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.1",
+        "path": "node_modules/htmlparser2/node_modules/readable-stream/node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "isarray",
+        "version": "0.0.1",
+        "path": "node_modules/htmlparser2/node_modules/readable-stream/node_modules/isarray/index.js"
+      },
+      {
+        "name": "string_decoder",
+        "version": "0.10.31",
+        "path": "node_modules/htmlparser2/node_modules/readable-stream/node_modules/string_decoder/index.js"
+      },
+      {
+        "name": "remove-element",
+        "version": "0.0.0",
+        "path": "node_modules/remove-element/index.js"
+      },
+      {
+        "name": "resolve",
+        "version": "0.6.3",
+        "path": "node_modules/resolve/index.js"
+      },
+      {
+        "name": "safe-json-parse",
+        "version": "1.0.1",
+        "path": "node_modules/safe-json-parse/index.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.6.0",
+        "path": "node_modules/underscore/underscore.js"
+      }
+    ],
+    "extensions": {
+      ".js": [
+        "index.js",
+        "node_modules/ansi-html-stream/colors.js",
+        "node_modules/ansi-html-stream/index.js",
+        "node_modules/ansi-html-stream/node_modules/clone/clone.js",
+        "node_modules/ansi-html-stream/node_modules/clone/clonePrototype.js",
+        "node_modules/ansi-html-stream/node_modules/clone/test.js",
+        "node_modules/ansi-html-stream/node_modules/escape-html/index.js",
+        "node_modules/ansi-html-stream/node_modules/map-stream/examples/pretty.js",
+        "node_modules/ansi-html-stream/node_modules/map-stream/index.js",
+        "node_modules/ansi-html-stream/node_modules/special-html/index.js",
+        "node_modules/ansi-html-stream/node_modules/split/examples/pretty.js",
+        "node_modules/ansi-html-stream/node_modules/split/index.js",
+        "node_modules/ansi-html-stream/node_modules/split/node_modules/through/index.js",
+        "node_modules/ansi-html-stream/node_modules/xtend/browser/index.js",
+        "node_modules/ansi-html-stream/node_modules/xtend/index.js",
+        "node_modules/ansi-html-stream/node_modules/xtend/support/compile.js",
+        "node_modules/ansi-html-stream/test.js",
+        "node_modules/coffee-script/lib/coffee-script/browser.js",
+        "node_modules/coffee-script/lib/coffee-script/cake.js",
+        "node_modules/coffee-script/lib/coffee-script/coffee-script.js",
+        "node_modules/coffee-script/lib/coffee-script/command.js",
+        "node_modules/coffee-script/lib/coffee-script/grammar.js",
+        "node_modules/coffee-script/lib/coffee-script/helpers.js",
+        "node_modules/coffee-script/lib/coffee-script/index.js",
+        "node_modules/coffee-script/lib/coffee-script/lexer.js",
+        "node_modules/coffee-script/lib/coffee-script/nodes.js",
+        "node_modules/coffee-script/lib/coffee-script/optparse.js",
+        "node_modules/coffee-script/lib/coffee-script/parser.js",
+        "node_modules/coffee-script/lib/coffee-script/register.js",
+        "node_modules/coffee-script/lib/coffee-script/repl.js",
+        "node_modules/coffee-script/lib/coffee-script/rewriter.js",
+        "node_modules/coffee-script/lib/coffee-script/scope.js",
+        "node_modules/coffee-script/lib/coffee-script/sourcemap.js",
+        "node_modules/coffee-script/node_modules/mkdirp/examples/pow.js",
+        "node_modules/coffee-script/node_modules/mkdirp/index.js",
+        "node_modules/coffee-script/register.js",
+        "node_modules/detective/example/strings.js",
+        "node_modules/detective/example/strings_src.js",
+        "node_modules/detective/index.js",
+        "node_modules/detective/node_modules/escodegen/Gruntfile.js",
+        "node_modules/detective/node_modules/escodegen/bin/escodegen.js",
+        "node_modules/detective/node_modules/escodegen/bin/esgenerate.js",
+        "node_modules/detective/node_modules/escodegen/escodegen.browser.min.js",
+        "node_modules/detective/node_modules/escodegen/escodegen.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/esprima/bin/esparse.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/esprima/bin/esvalidate.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/esprima/esprima.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/estraverse/estraverse.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/esutils/lib/code.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/esutils/lib/keyword.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/esutils/lib/utils.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/Makefile.dryice.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/build/assert-shim.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/build/mini-require.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/build/suffix-browser.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/build/test-prefix.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/build/test-suffix.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/array-set.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/base64-vlq.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/base64.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/binary-search.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/source-map-consumer.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/source-map-generator.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/source-node.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/util.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/node_modules/amdefine/amdefine.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/node_modules/amdefine/intercept.js",
+        "node_modules/detective/node_modules/esprima-six/assets/codemirror/codemirror.js",
+        "node_modules/detective/node_modules/esprima-six/assets/codemirror/javascript.js",
+        "node_modules/detective/node_modules/esprima-six/assets/json2.js",
+        "node_modules/detective/node_modules/esprima-six/assets/prettify/prettify.js",
+        "node_modules/detective/node_modules/esprima-six/assets/require.js",
+        "node_modules/detective/node_modules/esprima-six/assets/yui/treeview-min.js",
+        "node_modules/detective/node_modules/esprima-six/assets/yui/yahoo-dom-event.js",
+        "node_modules/detective/node_modules/esprima-six/bin/esparse.js",
+        "node_modules/detective/node_modules/esprima-six/demo/checkenv.js",
+        "node_modules/detective/node_modules/esprima-six/demo/collector.js",
+        "node_modules/detective/node_modules/esprima-six/demo/functiontrace.js",
+        "node_modules/detective/node_modules/esprima-six/demo/highlight.js",
+        "node_modules/detective/node_modules/esprima-six/demo/minify.js",
+        "node_modules/detective/node_modules/esprima-six/demo/rewrite.js",
+        "node_modules/detective/node_modules/esprima-six/demo/transpile.js",
+        "node_modules/detective/node_modules/esprima-six/demo/validate.js",
+        "node_modules/detective/node_modules/esprima-six/esprima.js",
+        "node_modules/detective/node_modules/esprima-six/examples/detectnestedternary.js",
+        "node_modules/detective/node_modules/esprima-six/examples/findbooleantrap.js",
+        "node_modules/detective/node_modules/esprima-six/examples/tokendist.js",
+        "node_modules/detective/node_modules/esprima-six/tools/generate-test-fixture.js",
+        "node_modules/findup/bin/findup.js",
+        "node_modules/findup/index.js",
+        "node_modules/findup/node_modules/colors/colors.js",
+        "node_modules/findup/node_modules/colors/example.js",
+        "node_modules/findup/node_modules/colors/test.js",
+        "node_modules/findup/node_modules/colors/themes/winston-dark.js",
+        "node_modules/findup/node_modules/colors/themes/winston-light.js",
+        "node_modules/findup/node_modules/commander/index.js",
+        "node_modules/htmlparser2/lib/CollectingHandler.js",
+        "node_modules/htmlparser2/lib/FeedHandler.js",
+        "node_modules/htmlparser2/lib/Parser.js",
+        "node_modules/htmlparser2/lib/ProxyHandler.js",
+        "node_modules/htmlparser2/lib/Stream.js",
+        "node_modules/htmlparser2/lib/Tokenizer.js",
+        "node_modules/htmlparser2/lib/WritableStream.js",
+        "node_modules/htmlparser2/lib/index.js",
+        "node_modules/htmlparser2/node_modules/domelementtype/index.js",
+        "node_modules/htmlparser2/node_modules/domhandler/index.js",
+        "node_modules/htmlparser2/node_modules/domhandler/lib/element.js",
+        "node_modules/htmlparser2/node_modules/domhandler/lib/node.js",
+        "node_modules/htmlparser2/node_modules/domutils/index.js",
+        "node_modules/htmlparser2/node_modules/domutils/lib/helpers.js",
+        "node_modules/htmlparser2/node_modules/domutils/lib/legacy.js",
+        "node_modules/htmlparser2/node_modules/domutils/lib/manipulation.js",
+        "node_modules/htmlparser2/node_modules/domutils/lib/querying.js",
+        "node_modules/htmlparser2/node_modules/domutils/lib/stringify.js",
+        "node_modules/htmlparser2/node_modules/domutils/lib/traversal.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/duplex.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/lib/_stream_duplex.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/lib/_stream_passthrough.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/lib/_stream_readable.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/lib/_stream_transform.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/lib/_stream_writable.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/node_modules/core-util-is/lib/util.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/node_modules/core-util-is/util.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/node_modules/inherits/inherits.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/node_modules/inherits/inherits_browser.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/node_modules/inherits/test.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/node_modules/isarray/build/build.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/node_modules/isarray/index.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/node_modules/string_decoder/index.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/passthrough.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/readable.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/transform.js",
+        "node_modules/htmlparser2/node_modules/readable-stream/writable.js",
+        "node_modules/remove-element/index.js",
+        "node_modules/resolve/example/async.js",
+        "node_modules/resolve/example/sync.js",
+        "node_modules/resolve/index.js",
+        "node_modules/resolve/lib/async.js",
+        "node_modules/resolve/lib/caller.js",
+        "node_modules/resolve/lib/core.js",
+        "node_modules/resolve/lib/node-modules-paths.js",
+        "node_modules/resolve/lib/sync.js",
+        "node_modules/safe-json-parse/examples/simple.js",
+        "node_modules/safe-json-parse/index.js",
+        "node_modules/underscore/underscore-min.js",
+        "node_modules/underscore/underscore.js"
+      ],
+      ".coffee": [
+        "lib/bower-install-view.coffee",
+        "lib/bower-install.coffee"
+      ],
+      ".json": [
+        "node_modules/ansi-html-stream/node_modules/clone/package.json",
+        "node_modules/ansi-html-stream/node_modules/escape-html/component.json",
+        "node_modules/ansi-html-stream/node_modules/escape-html/package.json",
+        "node_modules/ansi-html-stream/node_modules/map-stream/package.json",
+        "node_modules/ansi-html-stream/node_modules/special-html/component.json",
+        "node_modules/ansi-html-stream/node_modules/special-html/package.json",
+        "node_modules/ansi-html-stream/node_modules/split/node_modules/through/package.json",
+        "node_modules/ansi-html-stream/node_modules/split/package.json",
+        "node_modules/ansi-html-stream/node_modules/xtend/package.json",
+        "node_modules/ansi-html-stream/package.json",
+        "node_modules/coffee-script/node_modules/mkdirp/package.json",
+        "node_modules/coffee-script/package.json",
+        "node_modules/detective/node_modules/escodegen/component.json",
+        "node_modules/detective/node_modules/escodegen/node_modules/esprima/package.json",
+        "node_modules/detective/node_modules/escodegen/node_modules/estraverse/package.json",
+        "node_modules/detective/node_modules/escodegen/node_modules/esutils/package.json",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/node_modules/amdefine/package.json",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/package.json",
+        "node_modules/detective/node_modules/escodegen/package.json",
+        "node_modules/detective/node_modules/esprima-six/component.json",
+        "node_modules/detective/node_modules/esprima-six/package.json",
+        "node_modules/detective/package.json",
+        "node_modules/findup/node_modules/colors/package.json",
+        "node_modules/findup/node_modules/commander/package.json",
+        "node_modules/findup/package.json",
+        "node_modules/htmlparser2/lib/entities/decode.json",
+        "node_modules/htmlparser2/lib/entities/entities.json",
+        "node_modules/htmlparser2/lib/entities/legacy.json",
+        "node_modules/htmlparser2/lib/entities/xml.json",
+        "node_modules/htmlparser2/node_modules/domelementtype/package.json",
+        "node_modules/htmlparser2/node_modules/domhandler/package.json",
+        "node_modules/htmlparser2/node_modules/domutils/package.json",
+        "node_modules/htmlparser2/node_modules/readable-stream/node_modules/core-util-is/package.json",
+        "node_modules/htmlparser2/node_modules/readable-stream/node_modules/inherits/package.json",
+        "node_modules/htmlparser2/node_modules/readable-stream/node_modules/isarray/component.json",
+        "node_modules/htmlparser2/node_modules/readable-stream/node_modules/isarray/package.json",
+        "node_modules/htmlparser2/node_modules/readable-stream/node_modules/string_decoder/package.json",
+        "node_modules/htmlparser2/node_modules/readable-stream/package.json",
+        "node_modules/htmlparser2/package.json",
+        "node_modules/remove-element/package.json",
+        "node_modules/resolve/lib/core.json",
+        "node_modules/resolve/package.json",
+        "node_modules/safe-json-parse/.testem.json",
+        "node_modules/safe-json-parse/package.json",
+        "node_modules/underscore/package.json",
+        "package.json"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "",
+          "lib",
+          "spec"
+        ],
+        "dependencies": {
+          "remove-element": "0.0.0",
+          "safe-json-parse": "~1.0.1",
+          "resolve": "~0.6.1",
+          "coffee-script": "~1.7.1",
+          "ansi-html-stream": "0.0.3",
+          "detective": "~2.4.0",
+          "findup": "~0.1.3",
+          "underscore": "~1.6.0",
+          "htmlparser2": "~3.5.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/ansi-html-stream"
+        ],
+        "dependencies": {
+          "map-stream": "~0.0.1",
+          "escape-html": "0.0.1",
+          "special-html": "0.0.1",
+          "xtend": "~1.0.3",
+          "split": "~0.1.0",
+          "clone": "0.1.6"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/ansi-html-stream/node_modules/split/examples",
+          "node_modules/ansi-html-stream/node_modules/split",
+          "node_modules/ansi-html-stream/node_modules/split/test"
+        ],
+        "dependencies": {
+          "through": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/coffee-script/lib/coffee-script",
+          "node_modules/coffee-script"
+        ],
+        "dependencies": {
+          "mkdirp": "~0.3.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/detective/example",
+          "node_modules/detective",
+          "node_modules/detective/test",
+          "node_modules/detective/test/files"
+        ],
+        "dependencies": {
+          "escodegen": "~1.1.0",
+          "esprima-six": "0.0.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/detective/node_modules/escodegen",
+          "node_modules/detective/node_modules/escodegen/bin"
+        ],
+        "dependencies": {
+          "esprima": "~1.0.4",
+          "estraverse": "~1.5.0",
+          "esutils": "~1.0.0",
+          "source-map": "~0.1.30"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/detective/node_modules/escodegen/node_modules/source-map",
+          "node_modules/detective/node_modules/escodegen/node_modules/source-map/build",
+          "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map",
+          "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib",
+          "node_modules/detective/node_modules/escodegen/node_modules/source-map/test",
+          "node_modules/detective/node_modules/escodegen/node_modules/source-map/test/source-map"
+        ],
+        "dependencies": {
+          "amdefine": ">=0.0.4"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/findup/bin",
+          "node_modules/findup",
+          "node_modules/findup/test",
+          "node_modules/findup/test/fixture",
+          "node_modules/findup/test/fixture/f/e/d/c/b/a",
+          "node_modules/findup/test/fixture/f/e/d/c"
+        ],
+        "dependencies": {
+          "colors": "~0.6.0-1",
+          "commander": "~2.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/htmlparser2/lib",
+          "node_modules/htmlparser2/lib/entities",
+          "node_modules/htmlparser2",
+          "node_modules/htmlparser2/test",
+          "node_modules/htmlparser2/test/Events",
+          "node_modules/htmlparser2/test/Feeds",
+          "node_modules/htmlparser2/test/Stream"
+        ],
+        "dependencies": {
+          "domhandler": "2.2",
+          "domutils": "1.3",
+          "domelementtype": "1",
+          "readable-stream": "1.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/htmlparser2/node_modules/domhandler",
+          "node_modules/htmlparser2/node_modules/domhandler/lib",
+          "node_modules/htmlparser2/node_modules/domhandler/test/cases",
+          "node_modules/htmlparser2/node_modules/domhandler/test"
+        ],
+        "dependencies": {
+          "domelementtype": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/htmlparser2/node_modules/domutils",
+          "node_modules/htmlparser2/node_modules/domutils/lib",
+          "node_modules/htmlparser2/node_modules/domutils/test",
+          "node_modules/htmlparser2/node_modules/domutils/test/tests"
+        ],
+        "dependencies": {
+          "domelementtype": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/htmlparser2/node_modules/readable-stream",
+          "node_modules/htmlparser2/node_modules/readable-stream/lib"
+        ],
+        "dependencies": {
+          "core-util-is": "~1.0.0",
+          "isarray": "0.0.1",
+          "string_decoder": "~0.10.x",
+          "inherits": "~2.0.1"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,940 @@
+{
+  "name": "npm-install",
+  "main": "./index",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Automatically install and save any missing npm modules being used in the current file",
+  "activationEvents": [
+    "npm-install:save",
+    "npm-install:save-dev"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hughsk/atom-npm-install"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+    "ansi-html-stream": "0.0.3",
+    "coffee-script": "^1.7.1",
+    "detective": "^2.4.1",
+    "domify": "^1.2.2",
+    "findup": "^0.1.3",
+    "map-async": "^0.1.1",
+    "npm-stats": "^0.3.0",
+    "remove-element": "0.0.0",
+    "resolve": "^0.6.1",
+    "safe-json-parse": "^1.0.1"
+  },
+  "readme": "# npm-install [![Flattr this!](https://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=hughskennedy&url=http://github.com/hughsk/npm-install&title=npm-install&description=hughsk/npm-install%20on%20GitHub&language=en_GB&tags=flattr,github,javascript&category=software)[![experimental](http://hughsk.github.io/stability-badges/dist/experimental.svg)](http://github.com/hughsk/stability-badges) #\n\nAutomatically install and save any missing npm modules being used in the current file.\n\n![Imgur](http://i.imgur.com/yH6kdSq.gif)\n\nUses [detective](http://github.com/substack/node-detective) to analyse the current file for require calls, installing and saving any that aren't already in the project's `package.json` file.\n\n## Usage ##\n\nOpen the Command Palette, and type `npm install` if you're in a JavaScript or CoffeeScript file.\n\n## Fixing your PATH ##\n\nIn some cases, Atom won't always have the correct path to resolve npm. This\nwill result in an `ENOENT` error. In that case, add the following to the top\nof your init script:\n\n``` javascript\nprocess.env.PATH = ':/usr/local/bin'\n```\n\n## Keybindings ##\n\nAs of version `2.0.0` keybindings are not included by default. If you miss\nthese shortcuts, simply add the following to your keymap file:\n\n``` coffeescript\n'.workspace':\n  'ctrl-alt-i': 'npm-install:save'\n  'ctrl-alt-d': 'npm-install:save-dev'\n```\n\n## License ##\n\nMIT. See [LICENSE.md](http://github.com/hughsk/npm-install/blob/master/LICENSE.md) for details.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/hughsk/atom-npm-install/issues"
+  },
+  "homepage": "https://github.com/hughsk/atom-npm-install",
+  "_id": "npm-install@2.0.0",
+  "dist": {
+    "shasum": "7a756201a3f95be4804be4f96c088773797e57ed"
+  },
+  "_resolved": "/private/var/folders/dy/fk5gyc5d26d9c6yt64s4ckz80000gn/T/d-11502-2393-16oqegl/package.tgz",
+  "_from": "/private/var/folders/dy/fk5gyc5d26d9c6yt64s4ckz80000gn/T/d-11502-2393-16oqegl/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "ansi-html-stream",
+        "version": "0.0.3",
+        "path": "node_modules/ansi-html-stream/index.js"
+      },
+      {
+        "name": "clone",
+        "version": "0.1.6",
+        "path": "node_modules/ansi-html-stream/node_modules/clone/clone.js"
+      },
+      {
+        "name": "escape-html",
+        "version": "0.0.1",
+        "path": "node_modules/ansi-html-stream/node_modules/escape-html/index.js"
+      },
+      {
+        "name": "map-stream",
+        "version": "0.0.5",
+        "path": "node_modules/ansi-html-stream/node_modules/map-stream/index.js"
+      },
+      {
+        "name": "special-html",
+        "version": "0.0.1",
+        "path": "node_modules/ansi-html-stream/node_modules/special-html/index.js"
+      },
+      {
+        "name": "split",
+        "version": "0.1.2",
+        "path": "node_modules/ansi-html-stream/node_modules/split/index.js"
+      },
+      {
+        "name": "through",
+        "version": "1.1.2",
+        "path": "node_modules/ansi-html-stream/node_modules/split/node_modules/through/index.js"
+      },
+      {
+        "name": "xtend",
+        "version": "1.0.3",
+        "path": "node_modules/ansi-html-stream/node_modules/xtend/index.js"
+      },
+      {
+        "name": "coffee-script",
+        "version": "1.8.0",
+        "path": "node_modules/coffee-script/lib/coffee-script/coffee-script.js"
+      },
+      {
+        "name": "mkdirp",
+        "version": "0.3.5",
+        "path": "node_modules/coffee-script/node_modules/mkdirp/index.js"
+      },
+      {
+        "name": "detective",
+        "version": "2.4.1",
+        "path": "node_modules/detective/index.js"
+      },
+      {
+        "name": "escodegen",
+        "version": "1.1.0",
+        "path": "node_modules/detective/node_modules/escodegen/escodegen.js"
+      },
+      {
+        "name": "esprima",
+        "version": "1.0.4",
+        "path": "node_modules/detective/node_modules/escodegen/node_modules/esprima/esprima.js"
+      },
+      {
+        "name": "estraverse",
+        "version": "1.5.1",
+        "path": "node_modules/detective/node_modules/escodegen/node_modules/estraverse/estraverse.js"
+      },
+      {
+        "name": "esutils",
+        "version": "1.0.0",
+        "path": "node_modules/detective/node_modules/escodegen/node_modules/esutils/lib/utils.js"
+      },
+      {
+        "name": "source-map",
+        "version": "0.1.42",
+        "path": "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map.js"
+      },
+      {
+        "name": "amdefine",
+        "version": "0.1.0",
+        "path": "node_modules/detective/node_modules/escodegen/node_modules/source-map/node_modules/amdefine/amdefine.js"
+      },
+      {
+        "name": "esprima-six",
+        "version": "0.0.3",
+        "path": "node_modules/detective/node_modules/esprima-six/esprima.js"
+      },
+      {
+        "name": "domify",
+        "version": "1.3.1",
+        "path": "node_modules/domify/index.js"
+      },
+      {
+        "name": "findup",
+        "version": "0.1.5",
+        "path": "node_modules/findup/index.js"
+      },
+      {
+        "name": "colors",
+        "version": "0.6.2",
+        "path": "node_modules/findup/node_modules/colors/colors.js"
+      },
+      {
+        "name": "commander",
+        "version": "2.1.0",
+        "path": "node_modules/findup/node_modules/commander/index.js"
+      },
+      {
+        "name": "map-async",
+        "version": "0.1.1",
+        "path": "node_modules/map-async/index.js"
+      },
+      {
+        "name": "npm-stats",
+        "version": "0.3.0",
+        "path": "node_modules/npm-stats/index.js"
+      },
+      {
+        "name": "event-stream",
+        "version": "3.0.20",
+        "path": "node_modules/npm-stats/node_modules/event-stream/index.js"
+      },
+      {
+        "name": "duplexer",
+        "version": "0.1.1",
+        "path": "node_modules/npm-stats/node_modules/event-stream/node_modules/duplexer/index.js"
+      },
+      {
+        "name": "from",
+        "version": "0.1.3",
+        "path": "node_modules/npm-stats/node_modules/event-stream/node_modules/from/index.js"
+      },
+      {
+        "name": "map-stream",
+        "version": "0.0.5",
+        "path": "node_modules/npm-stats/node_modules/event-stream/node_modules/map-stream/index.js"
+      },
+      {
+        "name": "pause-stream",
+        "version": "0.0.11",
+        "path": "node_modules/npm-stats/node_modules/event-stream/node_modules/pause-stream/index.js"
+      },
+      {
+        "name": "split",
+        "version": "0.2.10",
+        "path": "node_modules/npm-stats/node_modules/event-stream/node_modules/split/index.js"
+      },
+      {
+        "name": "stream-combiner",
+        "version": "0.0.4",
+        "path": "node_modules/npm-stats/node_modules/event-stream/node_modules/stream-combiner/index.js"
+      },
+      {
+        "name": "through",
+        "version": "2.3.6",
+        "path": "node_modules/npm-stats/node_modules/event-stream/node_modules/through/index.js"
+      },
+      {
+        "name": "JSONStream",
+        "version": "0.6.4",
+        "path": "node_modules/npm-stats/node_modules/JSONStream/index.js"
+      },
+      {
+        "name": "jsonparse",
+        "version": "0.0.5",
+        "path": "node_modules/npm-stats/node_modules/JSONStream/node_modules/jsonparse/jsonparse.js"
+      },
+      {
+        "name": "through",
+        "version": "2.2.7",
+        "path": "node_modules/npm-stats/node_modules/JSONStream/node_modules/through/index.js"
+      },
+      {
+        "name": "nano",
+        "version": "3.3.8",
+        "path": "node_modules/npm-stats/node_modules/nano/nano.js"
+      },
+      {
+        "name": "errs",
+        "version": "0.2.4",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/errs/lib/errs.js"
+      },
+      {
+        "name": "follow",
+        "version": "0.8.0",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/follow/api.js"
+      },
+      {
+        "name": "request",
+        "version": "2.2.9",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/follow/node_modules/request/main.js"
+      },
+      {
+        "name": "request",
+        "version": "2.16.6",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/index.js"
+      },
+      {
+        "name": "aws-sign",
+        "version": "0.2.0",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/aws-sign/index.js"
+      },
+      {
+        "name": "cookie-jar",
+        "version": "0.2.0",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/cookie-jar/index.js"
+      },
+      {
+        "name": "forever-agent",
+        "version": "0.2.0",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/forever-agent/index.js"
+      },
+      {
+        "name": "form-data",
+        "version": "0.0.10",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/lib/form_data.js"
+      },
+      {
+        "name": "async",
+        "version": "0.2.10",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/node_modules/async/lib/async.js"
+      },
+      {
+        "name": "combined-stream",
+        "version": "0.0.7",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/node_modules/combined-stream/lib/combined_stream.js"
+      },
+      {
+        "name": "delayed-stream",
+        "version": "0.0.5",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/lib/delayed_stream.js"
+      },
+      {
+        "name": "hawk",
+        "version": "0.10.2",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/index.js"
+      },
+      {
+        "name": "boom",
+        "version": "0.3.8",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/boom/index.js"
+      },
+      {
+        "name": "cryptiles",
+        "version": "0.1.3",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/cryptiles/index.js"
+      },
+      {
+        "name": "hoek",
+        "version": "0.7.6",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/hoek/index.js"
+      },
+      {
+        "name": "sntp",
+        "version": "0.1.4",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/sntp/index.js"
+      },
+      {
+        "name": "json-stringify-safe",
+        "version": "3.0.0",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/json-stringify-safe/stringify.js"
+      },
+      {
+        "name": "mime",
+        "version": "1.2.11",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/mime/mime.js"
+      },
+      {
+        "name": "node-uuid",
+        "version": "1.4.2",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/node-uuid/uuid.js"
+      },
+      {
+        "name": "oauth-sign",
+        "version": "0.2.0",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/oauth-sign/index.js"
+      },
+      {
+        "name": "qs",
+        "version": "0.5.6",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/qs/index.js"
+      },
+      {
+        "name": "tunnel-agent",
+        "version": "0.2.0",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/tunnel-agent/index.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.4.4",
+        "path": "node_modules/npm-stats/node_modules/nano/node_modules/underscore/underscore.js"
+      },
+      {
+        "name": "remove-element",
+        "version": "0.0.0",
+        "path": "node_modules/remove-element/index.js"
+      },
+      {
+        "name": "resolve",
+        "version": "0.6.3",
+        "path": "node_modules/resolve/index.js"
+      },
+      {
+        "name": "safe-json-parse",
+        "version": "1.0.1",
+        "path": "node_modules/safe-json-parse/index.js"
+      }
+    ],
+    "extensions": {
+      ".js": [
+        "index.js",
+        "node_modules/ansi-html-stream/colors.js",
+        "node_modules/ansi-html-stream/index.js",
+        "node_modules/ansi-html-stream/node_modules/clone/clone.js",
+        "node_modules/ansi-html-stream/node_modules/clone/clonePrototype.js",
+        "node_modules/ansi-html-stream/node_modules/clone/test.js",
+        "node_modules/ansi-html-stream/node_modules/escape-html/index.js",
+        "node_modules/ansi-html-stream/node_modules/map-stream/examples/pretty.js",
+        "node_modules/ansi-html-stream/node_modules/map-stream/index.js",
+        "node_modules/ansi-html-stream/node_modules/special-html/index.js",
+        "node_modules/ansi-html-stream/node_modules/split/examples/pretty.js",
+        "node_modules/ansi-html-stream/node_modules/split/index.js",
+        "node_modules/ansi-html-stream/node_modules/split/node_modules/through/index.js",
+        "node_modules/ansi-html-stream/node_modules/xtend/browser/index.js",
+        "node_modules/ansi-html-stream/node_modules/xtend/index.js",
+        "node_modules/ansi-html-stream/node_modules/xtend/support/compile.js",
+        "node_modules/ansi-html-stream/test.js",
+        "node_modules/coffee-script/lib/coffee-script/browser.js",
+        "node_modules/coffee-script/lib/coffee-script/cake.js",
+        "node_modules/coffee-script/lib/coffee-script/coffee-script.js",
+        "node_modules/coffee-script/lib/coffee-script/command.js",
+        "node_modules/coffee-script/lib/coffee-script/grammar.js",
+        "node_modules/coffee-script/lib/coffee-script/helpers.js",
+        "node_modules/coffee-script/lib/coffee-script/index.js",
+        "node_modules/coffee-script/lib/coffee-script/lexer.js",
+        "node_modules/coffee-script/lib/coffee-script/nodes.js",
+        "node_modules/coffee-script/lib/coffee-script/optparse.js",
+        "node_modules/coffee-script/lib/coffee-script/parser.js",
+        "node_modules/coffee-script/lib/coffee-script/register.js",
+        "node_modules/coffee-script/lib/coffee-script/repl.js",
+        "node_modules/coffee-script/lib/coffee-script/rewriter.js",
+        "node_modules/coffee-script/lib/coffee-script/scope.js",
+        "node_modules/coffee-script/lib/coffee-script/sourcemap.js",
+        "node_modules/coffee-script/node_modules/mkdirp/examples/pow.js",
+        "node_modules/coffee-script/node_modules/mkdirp/index.js",
+        "node_modules/coffee-script/register.js",
+        "node_modules/coffee-script/repl.js",
+        "node_modules/detective/example/strings.js",
+        "node_modules/detective/example/strings_src.js",
+        "node_modules/detective/index.js",
+        "node_modules/detective/node_modules/escodegen/Gruntfile.js",
+        "node_modules/detective/node_modules/escodegen/bin/escodegen.js",
+        "node_modules/detective/node_modules/escodegen/bin/esgenerate.js",
+        "node_modules/detective/node_modules/escodegen/escodegen.browser.min.js",
+        "node_modules/detective/node_modules/escodegen/escodegen.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/esprima/bin/esparse.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/esprima/bin/esvalidate.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/esprima/esprima.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/estraverse/estraverse.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/esutils/lib/code.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/esutils/lib/keyword.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/esutils/lib/utils.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/Makefile.dryice.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/build/assert-shim.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/build/mini-require.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/build/suffix-browser.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/build/test-prefix.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/build/test-suffix.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/array-set.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/base64-vlq.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/base64.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/binary-search.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/source-map-consumer.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/source-map-generator.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/source-node.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map/util.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/node_modules/amdefine/amdefine.js",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/node_modules/amdefine/intercept.js",
+        "node_modules/detective/node_modules/esprima-six/assets/codemirror/codemirror.js",
+        "node_modules/detective/node_modules/esprima-six/assets/codemirror/javascript.js",
+        "node_modules/detective/node_modules/esprima-six/assets/json2.js",
+        "node_modules/detective/node_modules/esprima-six/assets/prettify/prettify.js",
+        "node_modules/detective/node_modules/esprima-six/assets/require.js",
+        "node_modules/detective/node_modules/esprima-six/assets/yui/treeview-min.js",
+        "node_modules/detective/node_modules/esprima-six/assets/yui/yahoo-dom-event.js",
+        "node_modules/detective/node_modules/esprima-six/bin/esparse.js",
+        "node_modules/detective/node_modules/esprima-six/demo/checkenv.js",
+        "node_modules/detective/node_modules/esprima-six/demo/collector.js",
+        "node_modules/detective/node_modules/esprima-six/demo/functiontrace.js",
+        "node_modules/detective/node_modules/esprima-six/demo/highlight.js",
+        "node_modules/detective/node_modules/esprima-six/demo/minify.js",
+        "node_modules/detective/node_modules/esprima-six/demo/rewrite.js",
+        "node_modules/detective/node_modules/esprima-six/demo/transpile.js",
+        "node_modules/detective/node_modules/esprima-six/demo/validate.js",
+        "node_modules/detective/node_modules/esprima-six/esprima.js",
+        "node_modules/detective/node_modules/esprima-six/examples/detectnestedternary.js",
+        "node_modules/detective/node_modules/esprima-six/examples/findbooleantrap.js",
+        "node_modules/detective/node_modules/esprima-six/examples/tokendist.js",
+        "node_modules/detective/node_modules/esprima-six/tools/generate-test-fixture.js",
+        "node_modules/domify/index.js",
+        "node_modules/findup/bin/findup.js",
+        "node_modules/findup/index.js",
+        "node_modules/findup/node_modules/colors/colors.js",
+        "node_modules/findup/node_modules/colors/example.js",
+        "node_modules/findup/node_modules/colors/test.js",
+        "node_modules/findup/node_modules/colors/themes/winston-dark.js",
+        "node_modules/findup/node_modules/colors/themes/winston-light.js",
+        "node_modules/findup/node_modules/commander/index.js",
+        "node_modules/map-async/index.js",
+        "node_modules/npm-stats/index.js",
+        "node_modules/npm-stats/lib/keyword.js",
+        "node_modules/npm-stats/lib/module.js",
+        "node_modules/npm-stats/lib/registry.js",
+        "node_modules/npm-stats/lib/user.js",
+        "node_modules/npm-stats/node_modules/JSONStream/examples/all_docs.js",
+        "node_modules/npm-stats/node_modules/JSONStream/index.js",
+        "node_modules/npm-stats/node_modules/JSONStream/node_modules/jsonparse/bench.js",
+        "node_modules/npm-stats/node_modules/JSONStream/node_modules/jsonparse/examples/twitterfeed.js",
+        "node_modules/npm-stats/node_modules/JSONStream/node_modules/jsonparse/jsonparse.js",
+        "node_modules/npm-stats/node_modules/JSONStream/node_modules/through/index.js",
+        "node_modules/npm-stats/node_modules/event-stream/examples/pretty.js",
+        "node_modules/npm-stats/node_modules/event-stream/index.js",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/duplexer/index.js",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/from/index.js",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/map-stream/examples/pretty.js",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/map-stream/index.js",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/pause-stream/index.js",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/split/examples/pretty.js",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/split/index.js",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/stream-combiner/index.js",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/through/index.js",
+        "node_modules/npm-stats/node_modules/nano/logger/index.js",
+        "node_modules/npm-stats/node_modules/nano/nano.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/errs/examples/async-uncaught-exception.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/errs/examples/custom-error.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/errs/examples/handling-streams.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/errs/examples/stack.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/errs/examples/sync-uncaught-exception.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/errs/lib/errs.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/api.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/browser/eventemitter2.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/browser/export.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/browser/jquery-1.6.1.min.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/browser/log4js.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/browser/main.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/browser/querystring.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/browser/request.jquery.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/browser/require.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/browser/util.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/cli.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/lib/feed.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/lib/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/lib/stream.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/node_modules/request/main.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/node_modules/request/mimetypes.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/node_modules/request/oauth.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/node_modules/request/uuid.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/node_modules/request/vendor/cookie/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/node_modules/request/vendor/cookie/jar.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/aws-sign/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/cookie-jar/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/cookie-jar/jar.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/forever-agent/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/lib/form_data.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/node_modules/async/lib/async.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/node_modules/combined-stream/lib/combined_stream.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/lib/delayed_stream.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/example/usage.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/lib/client.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/lib/crypto.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/lib/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/lib/server.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/lib/uri.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/lib/utils.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/boom/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/cryptiles/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/hoek/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/hoek/lib/escape.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/hoek/lib/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/sntp/examples/offset.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/sntp/examples/time.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/sntp/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/json-stringify-safe/stringify.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/json-stringify-safe/test.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/mime/mime.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/mime/test.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/node-uuid/benchmark/benchmark.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/node-uuid/uuid.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/oauth-sign/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/oauth-sign/test.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/qs/benchmark.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/qs/examples.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/qs/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/tunnel-agent/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/underscore/index.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/underscore/underscore-min.js",
+        "node_modules/npm-stats/node_modules/nano/node_modules/underscore/underscore.js",
+        "node_modules/npm-stats/node_modules/nano/samples/bulk_transform.js",
+        "node_modules/npm-stats/node_modules/nano/samples/express.js",
+        "node_modules/npm-stats/node_modules/nano/samples/lazy_creation_of_views.js",
+        "node_modules/npm-stats/node_modules/nano/samples/lazy_db_creation_and_replication.js",
+        "node_modules/npm-stats/node_modules/nano/samples/pipe.js",
+        "node_modules/remove-element/index.js",
+        "node_modules/resolve/example/async.js",
+        "node_modules/resolve/example/sync.js",
+        "node_modules/resolve/index.js",
+        "node_modules/resolve/lib/async.js",
+        "node_modules/resolve/lib/caller.js",
+        "node_modules/resolve/lib/core.js",
+        "node_modules/resolve/lib/node-modules-paths.js",
+        "node_modules/resolve/lib/sync.js",
+        "node_modules/safe-json-parse/examples/simple.js",
+        "node_modules/safe-json-parse/index.js"
+      ],
+      ".json": [
+        "node_modules/ansi-html-stream/node_modules/clone/package.json",
+        "node_modules/ansi-html-stream/node_modules/escape-html/component.json",
+        "node_modules/ansi-html-stream/node_modules/escape-html/package.json",
+        "node_modules/ansi-html-stream/node_modules/map-stream/package.json",
+        "node_modules/ansi-html-stream/node_modules/special-html/component.json",
+        "node_modules/ansi-html-stream/node_modules/special-html/package.json",
+        "node_modules/ansi-html-stream/node_modules/split/node_modules/through/package.json",
+        "node_modules/ansi-html-stream/node_modules/split/package.json",
+        "node_modules/ansi-html-stream/node_modules/xtend/package.json",
+        "node_modules/ansi-html-stream/package.json",
+        "node_modules/coffee-script/node_modules/mkdirp/package.json",
+        "node_modules/coffee-script/package.json",
+        "node_modules/detective/node_modules/escodegen/component.json",
+        "node_modules/detective/node_modules/escodegen/node_modules/esprima/package.json",
+        "node_modules/detective/node_modules/escodegen/node_modules/estraverse/package.json",
+        "node_modules/detective/node_modules/escodegen/node_modules/esutils/package.json",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/node_modules/amdefine/package.json",
+        "node_modules/detective/node_modules/escodegen/node_modules/source-map/package.json",
+        "node_modules/detective/node_modules/escodegen/package.json",
+        "node_modules/detective/node_modules/esprima-six/component.json",
+        "node_modules/detective/node_modules/esprima-six/package.json",
+        "node_modules/detective/package.json",
+        "node_modules/domify/component.json",
+        "node_modules/domify/package.json",
+        "node_modules/findup/node_modules/colors/package.json",
+        "node_modules/findup/node_modules/commander/package.json",
+        "node_modules/findup/package.json",
+        "node_modules/map-async/package.json",
+        "node_modules/npm-stats/node_modules/JSONStream/node_modules/jsonparse/package.json",
+        "node_modules/npm-stats/node_modules/JSONStream/node_modules/jsonparse/samplejson/basic.json",
+        "node_modules/npm-stats/node_modules/JSONStream/node_modules/jsonparse/samplejson/basic2.json",
+        "node_modules/npm-stats/node_modules/JSONStream/node_modules/through/package.json",
+        "node_modules/npm-stats/node_modules/JSONStream/package.json",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/duplexer/package.json",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/from/package.json",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/map-stream/package.json",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/pause-stream/package.json",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/split/package.json",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/stream-combiner/package.json",
+        "node_modules/npm-stats/node_modules/event-stream/node_modules/through/package.json",
+        "node_modules/npm-stats/node_modules/event-stream/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/errs/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/node_modules/request/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/follow/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/aws-sign/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/cookie-jar/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/forever-agent/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/node_modules/async/component.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/node_modules/async/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/node_modules/combined-stream/node_modules/delayed-stream/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/node_modules/combined-stream/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/boom/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/hoek/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/sntp/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/json-stringify-safe/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/mime/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/node-uuid/component.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/node-uuid/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/oauth-sign/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/qs/component.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/qs/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/tunnel-agent/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/request/package.json",
+        "node_modules/npm-stats/node_modules/nano/node_modules/underscore/package.json",
+        "node_modules/npm-stats/node_modules/nano/package.json",
+        "node_modules/npm-stats/package.json",
+        "node_modules/remove-element/package.json",
+        "node_modules/resolve/lib/core.json",
+        "node_modules/resolve/package.json",
+        "node_modules/safe-json-parse/.testem.json",
+        "node_modules/safe-json-parse/package.json",
+        "package.json"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          ""
+        ],
+        "dependencies": {
+          "ansi-html-stream": "0.0.3",
+          "coffee-script": "^1.7.1",
+          "detective": "^2.4.1",
+          "domify": "^1.2.2",
+          "findup": "^0.1.3",
+          "map-async": "^0.1.1",
+          "npm-stats": "^0.3.0",
+          "remove-element": "0.0.0",
+          "resolve": "^0.6.1",
+          "safe-json-parse": "^1.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/ansi-html-stream"
+        ],
+        "dependencies": {
+          "map-stream": "~0.0.1",
+          "escape-html": "0.0.1",
+          "special-html": "0.0.1",
+          "xtend": "~1.0.3",
+          "split": "~0.1.0",
+          "clone": "0.1.6"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/ansi-html-stream/node_modules/split/examples",
+          "node_modules/ansi-html-stream/node_modules/split",
+          "node_modules/ansi-html-stream/node_modules/split/test"
+        ],
+        "dependencies": {
+          "through": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/coffee-script/lib/coffee-script",
+          "node_modules/coffee-script"
+        ],
+        "dependencies": {
+          "mkdirp": "~0.3.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/detective/example",
+          "node_modules/detective",
+          "node_modules/detective/test",
+          "node_modules/detective/test/files"
+        ],
+        "dependencies": {
+          "escodegen": "~1.1.0",
+          "esprima-six": "0.0.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/detective/node_modules/escodegen",
+          "node_modules/detective/node_modules/escodegen/bin"
+        ],
+        "dependencies": {
+          "esprima": "~1.0.4",
+          "estraverse": "~1.5.0",
+          "esutils": "~1.0.0",
+          "source-map": "~0.1.30"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/detective/node_modules/escodegen/node_modules/source-map",
+          "node_modules/detective/node_modules/escodegen/node_modules/source-map/build",
+          "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib/source-map",
+          "node_modules/detective/node_modules/escodegen/node_modules/source-map/lib",
+          "node_modules/detective/node_modules/escodegen/node_modules/source-map/test",
+          "node_modules/detective/node_modules/escodegen/node_modules/source-map/test/source-map"
+        ],
+        "dependencies": {
+          "amdefine": ">=0.0.4"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/findup/bin",
+          "node_modules/findup",
+          "node_modules/findup/test",
+          "node_modules/findup/test/fixture",
+          "node_modules/findup/test/fixture/f/e/d/c/b/a",
+          "node_modules/findup/test/fixture/f/e/d/c"
+        ],
+        "dependencies": {
+          "colors": "~0.6.0-1",
+          "commander": "~2.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats",
+          "node_modules/npm-stats/lib"
+        ],
+        "dependencies": {
+          "event-stream": "~3.0.12",
+          "JSONStream": "~0.6.2",
+          "nano": "~3.3.8"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/event-stream/examples",
+          "node_modules/npm-stats/node_modules/event-stream",
+          "node_modules/npm-stats/node_modules/event-stream/test",
+          "node_modules/npm-stats/node_modules/event-stream/test/helper"
+        ],
+        "dependencies": {
+          "through": "~2.3.1",
+          "duplexer": "~0.1.1",
+          "from": "~0",
+          "map-stream": "~0.0.3",
+          "pause-stream": "0.0.11",
+          "split": "0.2",
+          "stream-combiner": "~0.0.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/event-stream/node_modules/pause-stream",
+          "node_modules/npm-stats/node_modules/event-stream/node_modules/pause-stream/test"
+        ],
+        "dependencies": {
+          "through": "~2.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/event-stream/node_modules/split/examples",
+          "node_modules/npm-stats/node_modules/event-stream/node_modules/split",
+          "node_modules/npm-stats/node_modules/event-stream/node_modules/split/test"
+        ],
+        "dependencies": {
+          "through": "2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/event-stream/node_modules/stream-combiner",
+          "node_modules/npm-stats/node_modules/event-stream/node_modules/stream-combiner/test"
+        ],
+        "dependencies": {
+          "duplexer": "~0.1.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/JSONStream/examples",
+          "node_modules/npm-stats/node_modules/JSONStream",
+          "node_modules/npm-stats/node_modules/JSONStream/test",
+          "node_modules/npm-stats/node_modules/JSONStream/test/fixtures"
+        ],
+        "dependencies": {
+          "jsonparse": "0.0.5",
+          "through": "~2.2.7"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/nano/logger",
+          "node_modules/npm-stats/node_modules/nano",
+          "node_modules/npm-stats/node_modules/nano/samples",
+          "node_modules/npm-stats/node_modules/nano/tests/att",
+          "node_modules/npm-stats/node_modules/nano/tests/db",
+          "node_modules/npm-stats/node_modules/nano/tests/design",
+          "node_modules/npm-stats/node_modules/nano/tests/doc",
+          "node_modules/npm-stats/node_modules/nano/tests/fixtures/att",
+          "node_modules/npm-stats/node_modules/nano/tests/fixtures",
+          "node_modules/npm-stats/node_modules/nano/tests/fixtures/db",
+          "node_modules/npm-stats/node_modules/nano/tests/fixtures/design",
+          "node_modules/npm-stats/node_modules/nano/tests/fixtures/doc",
+          "node_modules/npm-stats/node_modules/nano/tests/fixtures/shared",
+          "node_modules/npm-stats/node_modules/nano/tests",
+          "node_modules/npm-stats/node_modules/nano/tests/shared"
+        ],
+        "dependencies": {
+          "request": "2.16.x",
+          "follow": "0.8.x",
+          "errs": "0.2.x",
+          "underscore": "1.4.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/nano/node_modules/follow",
+          "node_modules/npm-stats/node_modules/nano/node_modules/follow/browser",
+          "node_modules/npm-stats/node_modules/nano/node_modules/follow/lib",
+          "node_modules/npm-stats/node_modules/nano/node_modules/follow/test",
+          "node_modules/npm-stats/node_modules/nano/node_modules/follow/test/issues"
+        ],
+        "dependencies": {
+          "request": "~2.2.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/nano/node_modules/request",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/tests",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/tests/ssl/ca"
+        ],
+        "dependencies": {
+          "form-data": "~0.0.3",
+          "mime": "~1.2.7",
+          "hawk": "~0.10.2",
+          "node-uuid": "~1.4.0",
+          "cookie-jar": "~0.2.0",
+          "aws-sign": "~0.2.0",
+          "oauth-sign": "~0.2.0",
+          "forever-agent": "~0.2.0",
+          "tunnel-agent": "~0.2.0",
+          "json-stringify-safe": "~3.0.0",
+          "qs": "~0.5.4"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/lib",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data"
+        ],
+        "dependencies": {
+          "combined-stream": "~0.0.4",
+          "mime": "~1.2.2",
+          "async": "~0.2.7"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/node_modules/combined-stream/lib",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/form-data/node_modules/combined-stream"
+        ],
+        "dependencies": {
+          "delayed-stream": "0.0.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/example",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/lib",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/test"
+        ],
+        "dependencies": {
+          "hoek": "0.7.x",
+          "boom": "0.3.x",
+          "cryptiles": "0.1.x",
+          "sntp": "0.1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/boom",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/boom/lib",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/boom/test"
+        ],
+        "dependencies": {
+          "hoek": "0.7.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/cryptiles",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/cryptiles/test"
+        ],
+        "dependencies": {
+          "boom": "0.3.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/sntp/examples",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/sntp",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/sntp/lib",
+          "node_modules/npm-stats/node_modules/nano/node_modules/request/node_modules/hawk/node_modules/sntp/test"
+        ],
+        "dependencies": {
+          "hoek": "0.7.x"
+        }
+      }
+    ]
+  }
+}

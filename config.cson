@@ -1,0 +1,21 @@
+'global':
+  'core':
+    'disabledPackages': [
+      'tabs'
+      'tree-view'
+    ]
+  'exception-reporting':
+    'userId': '7a1f2169-e9d6-fd66-8ed8-4e7f1ef334f6'
+  'welcome':
+    'showOnStartup': false
+  'toolbar':
+    'position': 'Left'
+    'iconSize': '16px'
+    'visible': false
+  'tabs':
+    'showIcons': true
+  'tree-view':
+    'hideVcsIgnoredFiles': false
+    'hideIgnoredNames': false
+    'showOnRightSide': false
+  'linter': {}

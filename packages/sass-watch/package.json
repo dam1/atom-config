@@ -1,0 +1,1651 @@
+{
+  "name": "sass-watch",
+  "main": "./lib/sass-watch",
+  "version": "0.1.0",
+  "description": "Watch a SASS file and compile to CSS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arcath/sass-watch"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": "*"
+  },
+  "dependencies": {
+    "fs-plus": "^2.0.4",
+    "node-sass": "^1.2.3",
+    "space-pen": "^4",
+    "atom-space-pen-views": "^0",
+    "underscore-plus": "1.x",
+    "season": "^4"
+  },
+  "readme": "# Sass Watch [![Build Status](https://travis-ci.org/Arcath/sass-watch.svg)](https://travis-ci.org/Arcath/sass-watch)\n\nWatches your [SASS] files and compiles them when you save!\n\n## Watching a File\n\n`alt-cmd-S` brings up the confirm output screen where you specify the sass compiles to. Hit enter and thats it, Sass Watch will watch the file for changes and compile the css to the supplied output.\n\n## Viewing Watchers\n\n`Sass Watch: List` brings up a list of watchers. Select a watcher from the list and you will be given some details about the watcher, from here you can stop the watcher.\n\n[SASS]: http://sass-lang.com/\n",
+  "readmeFilename": "README.markdown",
+  "bugs": {
+    "url": "https://github.com/arcath/sass-watch/issues"
+  },
+  "homepage": "https://github.com/arcath/sass-watch",
+  "_id": "sass-watch@0.1.0",
+  "dist": {
+    "shasum": "13f609ab74f5067e4a3c36ade0c3006ac18b1df9"
+  },
+  "_resolved": "/private/var/folders/dy/fk5gyc5d26d9c6yt64s4ckz80000gn/T/d-11502-4009-ihoft2/package.tgz",
+  "_from": "/private/var/folders/dy/fk5gyc5d26d9c6yt64s4ckz80000gn/T/d-11502-4009-ihoft2/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "fuzzaldrin",
+        "version": "2.1.0",
+        "path": "node_modules/atom-space-pen-views/node_modules/fuzzaldrin/lib/fuzzaldrin.js"
+      },
+      {
+        "name": "grim",
+        "version": "0.12.0",
+        "path": "node_modules/atom-space-pen-views/node_modules/grim/lib/grim.js"
+      },
+      {
+        "name": "emissary",
+        "version": "1.3.1",
+        "path": "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/lib/emissary.js"
+      },
+      {
+        "name": "harmony-collections",
+        "version": "0.3.7",
+        "path": "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/harmony-collections/harmony-collections.js"
+      },
+      {
+        "name": "mixto",
+        "version": "1.0.0",
+        "path": "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/mixto/lib/mixin.js"
+      },
+      {
+        "name": "property-accessors",
+        "version": "1.1.0",
+        "path": "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/property-accessors/lib/property-accessors.js"
+      },
+      {
+        "name": "harmony-collections",
+        "version": "0.3.7",
+        "path": "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/property-accessors/node_modules/harmony-collections/harmony-collections.js"
+      },
+      {
+        "name": "fs-plus",
+        "version": "2.4.0",
+        "path": "node_modules/fs-plus/lib/fs-plus.js"
+      },
+      {
+        "name": "async",
+        "version": "0.2.10",
+        "path": "node_modules/fs-plus/node_modules/async/lib/async.js"
+      },
+      {
+        "name": "mkdirp",
+        "version": "0.3.5",
+        "path": "node_modules/fs-plus/node_modules/mkdirp/index.js"
+      },
+      {
+        "name": "rimraf",
+        "version": "2.2.8",
+        "path": "node_modules/fs-plus/node_modules/rimraf/rimraf.js"
+      },
+      {
+        "name": "node-sass",
+        "version": "1.2.3",
+        "path": "node_modules/node-sass/lib/index.js"
+      },
+      {
+        "name": "chalk",
+        "version": "0.5.1",
+        "path": "node_modules/node-sass/node_modules/chalk/index.js"
+      },
+      {
+        "name": "ansi-styles",
+        "version": "1.1.0",
+        "path": "node_modules/node-sass/node_modules/chalk/node_modules/ansi-styles/index.js"
+      },
+      {
+        "name": "escape-string-regexp",
+        "version": "1.0.2",
+        "path": "node_modules/node-sass/node_modules/chalk/node_modules/escape-string-regexp/index.js"
+      },
+      {
+        "name": "has-ansi",
+        "version": "0.1.0",
+        "path": "node_modules/node-sass/node_modules/chalk/node_modules/has-ansi/index.js"
+      },
+      {
+        "name": "ansi-regex",
+        "version": "0.2.1",
+        "path": "node_modules/node-sass/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/index.js"
+      },
+      {
+        "name": "strip-ansi",
+        "version": "0.3.0",
+        "path": "node_modules/node-sass/node_modules/chalk/node_modules/strip-ansi/index.js"
+      },
+      {
+        "name": "ansi-regex",
+        "version": "0.2.1",
+        "path": "node_modules/node-sass/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/index.js"
+      },
+      {
+        "name": "supports-color",
+        "version": "0.2.0",
+        "path": "node_modules/node-sass/node_modules/chalk/node_modules/supports-color/index.js"
+      },
+      {
+        "name": "cross-spawn",
+        "version": "0.2.3",
+        "path": "node_modules/node-sass/node_modules/cross-spawn/index.js"
+      },
+      {
+        "name": "lru-cache",
+        "version": "2.5.0",
+        "path": "node_modules/node-sass/node_modules/cross-spawn/node_modules/lru-cache/lib/lru-cache.js"
+      },
+      {
+        "name": "gaze",
+        "version": "0.5.1",
+        "path": "node_modules/node-sass/node_modules/gaze/lib/gaze.js"
+      },
+      {
+        "name": "globule",
+        "version": "0.1.0",
+        "path": "node_modules/node-sass/node_modules/gaze/node_modules/globule/lib/globule.js"
+      },
+      {
+        "name": "glob",
+        "version": "3.1.21",
+        "path": "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob/glob.js"
+      },
+      {
+        "name": "graceful-fs",
+        "version": "1.2.3",
+        "path": "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob/node_modules/graceful-fs/graceful-fs.js"
+      },
+      {
+        "name": "inherits",
+        "version": "1.0.0",
+        "path": "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob/node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "lodash",
+        "version": "1.0.1",
+        "path": "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/lodash/dist/lodash.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "0.2.14",
+        "path": "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "lru-cache",
+        "version": "2.5.0",
+        "path": "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js"
+      },
+      {
+        "name": "sigmund",
+        "version": "1.0.0",
+        "path": "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/minimatch/node_modules/sigmund/sigmund.js"
+      },
+      {
+        "name": "get-stdin",
+        "version": "3.0.2",
+        "path": "node_modules/node-sass/node_modules/get-stdin/index.js"
+      },
+      {
+        "name": "meow",
+        "version": "2.0.0",
+        "path": "node_modules/node-sass/node_modules/meow/index.js"
+      },
+      {
+        "name": "camelcase-keys",
+        "version": "1.0.0",
+        "path": "node_modules/node-sass/node_modules/meow/node_modules/camelcase-keys/index.js"
+      },
+      {
+        "name": "camelcase",
+        "version": "1.0.2",
+        "path": "node_modules/node-sass/node_modules/meow/node_modules/camelcase-keys/node_modules/camelcase/index.js"
+      },
+      {
+        "name": "map-obj",
+        "version": "1.0.0",
+        "path": "node_modules/node-sass/node_modules/meow/node_modules/camelcase-keys/node_modules/map-obj/index.js"
+      },
+      {
+        "name": "indent-string",
+        "version": "1.2.0",
+        "path": "node_modules/node-sass/node_modules/meow/node_modules/indent-string/index.js"
+      },
+      {
+        "name": "repeating",
+        "version": "1.1.1",
+        "path": "node_modules/node-sass/node_modules/meow/node_modules/indent-string/node_modules/repeating/index.js"
+      },
+      {
+        "name": "is-finite",
+        "version": "1.0.0",
+        "path": "node_modules/node-sass/node_modules/meow/node_modules/indent-string/node_modules/repeating/node_modules/is-finite/index.js"
+      },
+      {
+        "name": "minimist",
+        "version": "1.1.0",
+        "path": "node_modules/node-sass/node_modules/meow/node_modules/minimist/index.js"
+      },
+      {
+        "name": "mkdirp",
+        "version": "0.5.0",
+        "path": "node_modules/node-sass/node_modules/mkdirp/index.js"
+      },
+      {
+        "name": "minimist",
+        "version": "0.0.8",
+        "path": "node_modules/node-sass/node_modules/mkdirp/node_modules/minimist/index.js"
+      },
+      {
+        "name": "mocha",
+        "version": "2.1.0",
+        "path": "node_modules/node-sass/node_modules/mocha/index.js"
+      },
+      {
+        "name": "commander",
+        "version": "2.3.0",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/commander/index.js"
+      },
+      {
+        "name": "debug",
+        "version": "2.0.0",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/debug/node.js"
+      },
+      {
+        "name": "ms",
+        "version": "0.6.2",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/debug/node_modules/ms/index.js"
+      },
+      {
+        "name": "diff",
+        "version": "1.0.8",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/diff/diff.js"
+      },
+      {
+        "name": "escape-string-regexp",
+        "version": "1.0.2",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/escape-string-regexp/index.js"
+      },
+      {
+        "name": "glob",
+        "version": "3.2.3",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/glob/glob.js"
+      },
+      {
+        "name": "graceful-fs",
+        "version": "2.0.3",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/graceful-fs/graceful-fs.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.1",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "0.2.14",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/minimatch/minimatch.js"
+      },
+      {
+        "name": "lru-cache",
+        "version": "2.5.0",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js"
+      },
+      {
+        "name": "sigmund",
+        "version": "1.0.0",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/sigmund/sigmund.js"
+      },
+      {
+        "name": "growl",
+        "version": "1.8.1",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/growl/lib/growl.js"
+      },
+      {
+        "name": "jade",
+        "version": "0.26.3",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/jade/index.js"
+      },
+      {
+        "name": "commander",
+        "version": "0.6.1",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/jade/node_modules/commander/index.js"
+      },
+      {
+        "name": "mkdirp",
+        "version": "0.3.0",
+        "path": "node_modules/node-sass/node_modules/mocha/node_modules/jade/node_modules/mkdirp/index.js"
+      },
+      {
+        "name": "nan",
+        "version": "1.4.1",
+        "path": "node_modules/node-sass/node_modules/nan/include_dirs.js"
+      },
+      {
+        "name": "object-assign",
+        "version": "1.0.0",
+        "path": "node_modules/node-sass/node_modules/object-assign/index.js"
+      },
+      {
+        "name": "replace-ext",
+        "version": "0.0.1",
+        "path": "node_modules/node-sass/node_modules/replace-ext/index.js"
+      },
+      {
+        "name": "request",
+        "version": "2.51.0",
+        "path": "node_modules/node-sass/node_modules/request/index.js"
+      },
+      {
+        "name": "aws-sign2",
+        "version": "0.5.0",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/aws-sign2/index.js"
+      },
+      {
+        "name": "bl",
+        "version": "0.9.3",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/bl/bl.js"
+      },
+      {
+        "name": "readable-stream",
+        "version": "1.0.33",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/readable.js"
+      },
+      {
+        "name": "core-util-is",
+        "version": "1.0.1",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/lib/util.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.1",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/inherits.js"
+      },
+      {
+        "name": "isarray",
+        "version": "0.0.1",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/index.js"
+      },
+      {
+        "name": "string_decoder",
+        "version": "0.10.31",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/string_decoder/index.js"
+      },
+      {
+        "name": "caseless",
+        "version": "0.8.0",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/caseless/index.js"
+      },
+      {
+        "name": "combined-stream",
+        "version": "0.0.7",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/combined-stream/lib/combined_stream.js"
+      },
+      {
+        "name": "delayed-stream",
+        "version": "0.0.5",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/lib/delayed_stream.js"
+      },
+      {
+        "name": "forever-agent",
+        "version": "0.5.2",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/forever-agent/index.js"
+      },
+      {
+        "name": "form-data",
+        "version": "0.2.0",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/form-data/lib/form_data.js"
+      },
+      {
+        "name": "async",
+        "version": "0.9.0",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/form-data/node_modules/async/lib/async.js"
+      },
+      {
+        "name": "mime-types",
+        "version": "2.0.7",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/form-data/node_modules/mime-types/index.js"
+      },
+      {
+        "name": "mime-db",
+        "version": "1.5.0",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/form-data/node_modules/mime-types/node_modules/mime-db/index.js"
+      },
+      {
+        "name": "hawk",
+        "version": "1.1.1",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/hawk/index.js"
+      },
+      {
+        "name": "boom",
+        "version": "0.4.2",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/boom/index.js"
+      },
+      {
+        "name": "cryptiles",
+        "version": "0.2.2",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/cryptiles/index.js"
+      },
+      {
+        "name": "hoek",
+        "version": "0.9.1",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/hoek/index.js"
+      },
+      {
+        "name": "sntp",
+        "version": "0.2.4",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/sntp/index.js"
+      },
+      {
+        "name": "http-signature",
+        "version": "0.10.0",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/http-signature/lib/index.js"
+      },
+      {
+        "name": "asn1",
+        "version": "0.1.11",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/index.js"
+      },
+      {
+        "name": "assert-plus",
+        "version": "0.1.2",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/assert-plus/assert.js"
+      },
+      {
+        "name": "ctype",
+        "version": "0.5.2",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/ctype.js"
+      },
+      {
+        "name": "json-stringify-safe",
+        "version": "5.0.0",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/json-stringify-safe/stringify.js"
+      },
+      {
+        "name": "mime-types",
+        "version": "1.0.2",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/mime-types/lib/index.js"
+      },
+      {
+        "name": "node-uuid",
+        "version": "1.4.2",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/node-uuid/uuid.js"
+      },
+      {
+        "name": "oauth-sign",
+        "version": "0.5.0",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/oauth-sign/index.js"
+      },
+      {
+        "name": "qs",
+        "version": "2.3.3",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/qs/index.js"
+      },
+      {
+        "name": "stringstream",
+        "version": "0.0.4",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/stringstream/stringstream.js"
+      },
+      {
+        "name": "tough-cookie",
+        "version": "0.12.1",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/tough-cookie/lib/cookie.js"
+      },
+      {
+        "name": "punycode",
+        "version": "1.3.2",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/tough-cookie/node_modules/punycode/punycode.js"
+      },
+      {
+        "name": "tunnel-agent",
+        "version": "0.4.0",
+        "path": "node_modules/node-sass/node_modules/request/node_modules/tunnel-agent/index.js"
+      },
+      {
+        "name": "shelljs",
+        "version": "0.3.0",
+        "path": "node_modules/node-sass/node_modules/shelljs/shell.js"
+      },
+      {
+        "name": "season",
+        "version": "4.0.0",
+        "path": "node_modules/season/lib/cson.js"
+      },
+      {
+        "name": "cson-safe",
+        "version": "1.0.2",
+        "path": "node_modules/season/node_modules/cson-safe/lib/cson-safe.js"
+      },
+      {
+        "name": "coffee-script",
+        "version": "1.8.0",
+        "path": "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/coffee-script.js"
+      },
+      {
+        "name": "mkdirp",
+        "version": "0.3.5",
+        "path": "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/node_modules/mkdirp/index.js"
+      },
+      {
+        "name": "optimist",
+        "version": "0.4.0",
+        "path": "node_modules/season/node_modules/optimist/index.js"
+      },
+      {
+        "name": "wordwrap",
+        "version": "0.0.2",
+        "path": "node_modules/season/node_modules/optimist/node_modules/wordwrap/index.js"
+      },
+      {
+        "name": "space-pen",
+        "version": "4.3.0",
+        "path": "node_modules/space-pen/lib/space-pen.js"
+      },
+      {
+        "name": "grim",
+        "version": "0.12.0",
+        "path": "node_modules/space-pen/node_modules/grim/lib/grim.js"
+      },
+      {
+        "name": "emissary",
+        "version": "1.3.1",
+        "path": "node_modules/space-pen/node_modules/grim/node_modules/emissary/lib/emissary.js"
+      },
+      {
+        "name": "harmony-collections",
+        "version": "0.3.7",
+        "path": "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/harmony-collections/harmony-collections.js"
+      },
+      {
+        "name": "mixto",
+        "version": "1.0.0",
+        "path": "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/mixto/lib/mixin.js"
+      },
+      {
+        "name": "property-accessors",
+        "version": "1.1.0",
+        "path": "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/property-accessors/lib/property-accessors.js"
+      },
+      {
+        "name": "harmony-collections",
+        "version": "0.3.7",
+        "path": "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/property-accessors/node_modules/harmony-collections/harmony-collections.js"
+      },
+      {
+        "name": "underscore-plus",
+        "version": "1.6.6",
+        "path": "node_modules/underscore-plus/lib/underscore-plus.js"
+      },
+      {
+        "name": "underscore",
+        "version": "1.6.0",
+        "path": "node_modules/underscore-plus/node_modules/underscore/underscore.js"
+      }
+    ],
+    "extensions": {
+      ".coffee": [
+        "lib/list-view.coffee",
+        "lib/sass-watch.coffee",
+        "lib/target-view.coffee",
+        "lib/watcher-view.coffee",
+        "lib/watcher.coffee",
+        "node_modules/atom-space-pen-views/lib/main.coffee",
+        "node_modules/atom-space-pen-views/lib/scroll-view.coffee",
+        "node_modules/atom-space-pen-views/lib/select-list-view.coffee",
+        "node_modules/atom-space-pen-views/lib/text-editor-view.coffee"
+      ],
+      ".js": [
+        "node_modules/atom-space-pen-views/node_modules/fuzzaldrin/lib/filter.js",
+        "node_modules/atom-space-pen-views/node_modules/fuzzaldrin/lib/fuzzaldrin.js",
+        "node_modules/atom-space-pen-views/node_modules/fuzzaldrin/lib/matcher.js",
+        "node_modules/atom-space-pen-views/node_modules/fuzzaldrin/lib/scorer.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/lib/deprecation.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/lib/grim.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/lib/behavior.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/lib/emissary.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/lib/emitter.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/lib/helpers.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/lib/signal.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/lib/subscriber.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/lib/subscription.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/harmony-collections/harmony-collections.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/harmony-collections/harmony-collections.min.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/mixto/lib/mixin.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/property-accessors/lib/property-accessors.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/property-accessors/node_modules/harmony-collections/harmony-collections.js",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/property-accessors/node_modules/harmony-collections/harmony-collections.min.js",
+        "node_modules/fs-plus/lib/fs-plus.js",
+        "node_modules/fs-plus/node_modules/async/lib/async.js",
+        "node_modules/fs-plus/node_modules/mkdirp/examples/pow.js",
+        "node_modules/fs-plus/node_modules/mkdirp/index.js",
+        "node_modules/fs-plus/node_modules/rimraf/bin.js",
+        "node_modules/fs-plus/node_modules/rimraf/rimraf.js",
+        "node_modules/node-sass/lib/index.js",
+        "node_modules/node-sass/lib/render.js",
+        "node_modules/node-sass/node_modules/chalk/index.js",
+        "node_modules/node-sass/node_modules/chalk/node_modules/ansi-styles/index.js",
+        "node_modules/node-sass/node_modules/chalk/node_modules/escape-string-regexp/index.js",
+        "node_modules/node-sass/node_modules/chalk/node_modules/has-ansi/cli.js",
+        "node_modules/node-sass/node_modules/chalk/node_modules/has-ansi/index.js",
+        "node_modules/node-sass/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/index.js",
+        "node_modules/node-sass/node_modules/chalk/node_modules/strip-ansi/cli.js",
+        "node_modules/node-sass/node_modules/chalk/node_modules/strip-ansi/index.js",
+        "node_modules/node-sass/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/index.js",
+        "node_modules/node-sass/node_modules/chalk/node_modules/supports-color/cli.js",
+        "node_modules/node-sass/node_modules/chalk/node_modules/supports-color/index.js",
+        "node_modules/node-sass/node_modules/cross-spawn/index.js",
+        "node_modules/node-sass/node_modules/cross-spawn/node_modules/lru-cache/lib/lru-cache.js",
+        "node_modules/node-sass/node_modules/gaze/lib/gaze.js",
+        "node_modules/node-sass/node_modules/gaze/lib/helper.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/Gruntfile.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/lib/globule.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob/examples/g.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob/examples/usr-local.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob/glob.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob/node_modules/graceful-fs/graceful-fs.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob/node_modules/inherits/inherits.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/lodash/dist/lodash.compat.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/lodash/dist/lodash.compat.min.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/lodash/dist/lodash.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/lodash/dist/lodash.min.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/lodash/dist/lodash.underscore.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/lodash/dist/lodash.underscore.min.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/minimatch/minimatch.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/minimatch/node_modules/sigmund/bench.js",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/minimatch/node_modules/sigmund/sigmund.js",
+        "node_modules/node-sass/node_modules/get-stdin/index.js",
+        "node_modules/node-sass/node_modules/meow/index.js",
+        "node_modules/node-sass/node_modules/meow/node_modules/camelcase-keys/index.js",
+        "node_modules/node-sass/node_modules/meow/node_modules/camelcase-keys/node_modules/camelcase/index.js",
+        "node_modules/node-sass/node_modules/meow/node_modules/camelcase-keys/node_modules/map-obj/index.js",
+        "node_modules/node-sass/node_modules/meow/node_modules/indent-string/cli.js",
+        "node_modules/node-sass/node_modules/meow/node_modules/indent-string/index.js",
+        "node_modules/node-sass/node_modules/meow/node_modules/indent-string/node_modules/repeating/cli.js",
+        "node_modules/node-sass/node_modules/meow/node_modules/indent-string/node_modules/repeating/index.js",
+        "node_modules/node-sass/node_modules/meow/node_modules/indent-string/node_modules/repeating/node_modules/is-finite/index.js",
+        "node_modules/node-sass/node_modules/meow/node_modules/minimist/example/parse.js",
+        "node_modules/node-sass/node_modules/meow/node_modules/minimist/index.js",
+        "node_modules/node-sass/node_modules/mkdirp/bin/cmd.js",
+        "node_modules/node-sass/node_modules/mkdirp/examples/pow.js",
+        "node_modules/node-sass/node_modules/mkdirp/index.js",
+        "node_modules/node-sass/node_modules/mkdirp/node_modules/minimist/example/parse.js",
+        "node_modules/node-sass/node_modules/mkdirp/node_modules/minimist/index.js",
+        "node_modules/node-sass/node_modules/mocha/index.js",
+        "node_modules/node-sass/node_modules/mocha/lib/browser/debug.js",
+        "node_modules/node-sass/node_modules/mocha/lib/browser/diff.js",
+        "node_modules/node-sass/node_modules/mocha/lib/browser/escape-string-regexp.js",
+        "node_modules/node-sass/node_modules/mocha/lib/browser/events.js",
+        "node_modules/node-sass/node_modules/mocha/lib/browser/fs.js",
+        "node_modules/node-sass/node_modules/mocha/lib/browser/glob.js",
+        "node_modules/node-sass/node_modules/mocha/lib/browser/path.js",
+        "node_modules/node-sass/node_modules/mocha/lib/browser/progress.js",
+        "node_modules/node-sass/node_modules/mocha/lib/browser/tty.js",
+        "node_modules/node-sass/node_modules/mocha/lib/context.js",
+        "node_modules/node-sass/node_modules/mocha/lib/hook.js",
+        "node_modules/node-sass/node_modules/mocha/lib/interfaces/bdd.js",
+        "node_modules/node-sass/node_modules/mocha/lib/interfaces/exports.js",
+        "node_modules/node-sass/node_modules/mocha/lib/interfaces/index.js",
+        "node_modules/node-sass/node_modules/mocha/lib/interfaces/qunit.js",
+        "node_modules/node-sass/node_modules/mocha/lib/interfaces/tdd.js",
+        "node_modules/node-sass/node_modules/mocha/lib/mocha.js",
+        "node_modules/node-sass/node_modules/mocha/lib/ms.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/base.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/doc.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/dot.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/html-cov.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/html.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/index.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/json-cov.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/json-stream.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/json.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/landing.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/list.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/markdown.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/min.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/nyan.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/progress.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/spec.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/tap.js",
+        "node_modules/node-sass/node_modules/mocha/lib/reporters/xunit.js",
+        "node_modules/node-sass/node_modules/mocha/lib/runnable.js",
+        "node_modules/node-sass/node_modules/mocha/lib/runner.js",
+        "node_modules/node-sass/node_modules/mocha/lib/suite.js",
+        "node_modules/node-sass/node_modules/mocha/lib/test.js",
+        "node_modules/node-sass/node_modules/mocha/lib/utils.js",
+        "node_modules/node-sass/node_modules/mocha/mocha.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/commander/index.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/debug/browser.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/debug/debug.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/debug/node.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/debug/node_modules/ms/index.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/diff/diff.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/escape-string-regexp/index.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/examples/g.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/examples/usr-local.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/glob.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/graceful-fs/graceful-fs.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/graceful-fs/polyfills.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/inherits/inherits.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/inherits/inherits_browser.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/inherits/test.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/minimatch/minimatch.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/sigmund/bench.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/sigmund/sigmund.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/growl/lib/growl.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/growl/test.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/index.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/jade.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/jade.min.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/compiler.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/doctypes.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/filters.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/inline-tags.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/jade.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/lexer.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/attrs.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/block-comment.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/block.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/case.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/code.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/comment.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/doctype.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/each.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/filter.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/index.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/literal.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/mixin.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/node.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/tag.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes/text.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/parser.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/runtime.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/self-closing.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/utils.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/node_modules/commander/index.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/node_modules/commander/lib/commander.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/node_modules/mkdirp/examples/pow.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/node_modules/mkdirp/index.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/runtime.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/runtime.min.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/testing/index.js",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/testing/user.js",
+        "node_modules/node-sass/node_modules/nan/include_dirs.js",
+        "node_modules/node-sass/node_modules/object-assign/index.js",
+        "node_modules/node-sass/node_modules/replace-ext/index.js",
+        "node_modules/node-sass/node_modules/request/index.js",
+        "node_modules/node-sass/node_modules/request/lib/cookies.js",
+        "node_modules/node-sass/node_modules/request/lib/copy.js",
+        "node_modules/node-sass/node_modules/request/lib/debug.js",
+        "node_modules/node-sass/node_modules/request/lib/helpers.js",
+        "node_modules/node-sass/node_modules/request/node_modules/aws-sign2/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/bl.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/duplex.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_duplex.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_passthrough.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_readable.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_transform.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/lib/_stream_writable.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/lib/util.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/util.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/inherits.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/inherits_browser.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/test.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/build/build.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/string_decoder/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/passthrough.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/readable.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/transform.js",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/writable.js",
+        "node_modules/node-sass/node_modules/request/node_modules/caseless/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/caseless/test.js",
+        "node_modules/node-sass/node_modules/request/node_modules/combined-stream/lib/combined_stream.js",
+        "node_modules/node-sass/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/lib/delayed_stream.js",
+        "node_modules/node-sass/node_modules/request/node_modules/forever-agent/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/form-data/lib/form_data.js",
+        "node_modules/node-sass/node_modules/request/node_modules/form-data/node_modules/async/lib/async.js",
+        "node_modules/node-sass/node_modules/request/node_modules/form-data/node_modules/mime-types/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/form-data/node_modules/mime-types/node_modules/mime-db/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/example/usage.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/lib/browser.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/lib/client.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/lib/crypto.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/lib/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/lib/server.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/lib/utils.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/boom/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/boom/lib/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/cryptiles/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/hoek/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/hoek/lib/escape.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/hoek/lib/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/sntp/examples/offset.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/sntp/examples/time.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/sntp/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/sntp/lib/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/lib/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/lib/parser.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/lib/signer.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/lib/util.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/lib/verify.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/errors.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/reader.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/types.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/ber/writer.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/asn1/lib/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/asn1/tst/ber/reader.test.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/asn1/tst/ber/writer.test.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/assert-plus/assert.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/ctf.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/ctio.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/ctype.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/tst.fail.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/tst.float.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/tst.int.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/tst.psinfo.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/tst.struct.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/tst.typedef.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/float/tst.rfloat.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/float/tst.wfloat.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/int/tst.64.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/int/tst.rint.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/int/tst.wbounds.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/int/tst.wint.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/uint/tst.64.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/uint/tst.roundtrip.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/uint/tst.ruint.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctio/uint/tst.wuint.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.basicr.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.basicw.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.char.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.endian.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.oldwrite.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.readSize.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.structw.js",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctype/tst.writeStruct.js",
+        "node_modules/node-sass/node_modules/request/node_modules/json-stringify-safe/stringify.js",
+        "node_modules/node-sass/node_modules/request/node_modules/json-stringify-safe/test.js",
+        "node_modules/node-sass/node_modules/request/node_modules/mime-types/lib/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/node-uuid/benchmark/benchmark.js",
+        "node_modules/node-sass/node_modules/request/node_modules/node-uuid/uuid.js",
+        "node_modules/node-sass/node_modules/request/node_modules/oauth-sign/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/oauth-sign/test.js",
+        "node_modules/node-sass/node_modules/request/node_modules/qs/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/qs/lib/index.js",
+        "node_modules/node-sass/node_modules/request/node_modules/qs/lib/parse.js",
+        "node_modules/node-sass/node_modules/request/node_modules/qs/lib/stringify.js",
+        "node_modules/node-sass/node_modules/request/node_modules/qs/lib/utils.js",
+        "node_modules/node-sass/node_modules/request/node_modules/stringstream/example.js",
+        "node_modules/node-sass/node_modules/request/node_modules/stringstream/stringstream.js",
+        "node_modules/node-sass/node_modules/request/node_modules/tough-cookie/generate-pubsuffix.js",
+        "node_modules/node-sass/node_modules/request/node_modules/tough-cookie/lib/cookie.js",
+        "node_modules/node-sass/node_modules/request/node_modules/tough-cookie/lib/memstore.js",
+        "node_modules/node-sass/node_modules/request/node_modules/tough-cookie/lib/pubsuffix.js",
+        "node_modules/node-sass/node_modules/request/node_modules/tough-cookie/lib/store.js",
+        "node_modules/node-sass/node_modules/request/node_modules/tough-cookie/node_modules/punycode/punycode.js",
+        "node_modules/node-sass/node_modules/request/node_modules/tough-cookie/test.js",
+        "node_modules/node-sass/node_modules/request/node_modules/tunnel-agent/index.js",
+        "node_modules/node-sass/node_modules/request/request.js",
+        "node_modules/node-sass/node_modules/shelljs/global.js",
+        "node_modules/node-sass/node_modules/shelljs/make.js",
+        "node_modules/node-sass/node_modules/shelljs/scripts/generate-docs.js",
+        "node_modules/node-sass/node_modules/shelljs/scripts/run-tests.js",
+        "node_modules/node-sass/node_modules/shelljs/shell.js",
+        "node_modules/node-sass/node_modules/shelljs/src/cat.js",
+        "node_modules/node-sass/node_modules/shelljs/src/cd.js",
+        "node_modules/node-sass/node_modules/shelljs/src/chmod.js",
+        "node_modules/node-sass/node_modules/shelljs/src/common.js",
+        "node_modules/node-sass/node_modules/shelljs/src/cp.js",
+        "node_modules/node-sass/node_modules/shelljs/src/dirs.js",
+        "node_modules/node-sass/node_modules/shelljs/src/echo.js",
+        "node_modules/node-sass/node_modules/shelljs/src/error.js",
+        "node_modules/node-sass/node_modules/shelljs/src/exec.js",
+        "node_modules/node-sass/node_modules/shelljs/src/find.js",
+        "node_modules/node-sass/node_modules/shelljs/src/grep.js",
+        "node_modules/node-sass/node_modules/shelljs/src/ln.js",
+        "node_modules/node-sass/node_modules/shelljs/src/ls.js",
+        "node_modules/node-sass/node_modules/shelljs/src/mkdir.js",
+        "node_modules/node-sass/node_modules/shelljs/src/mv.js",
+        "node_modules/node-sass/node_modules/shelljs/src/popd.js",
+        "node_modules/node-sass/node_modules/shelljs/src/pushd.js",
+        "node_modules/node-sass/node_modules/shelljs/src/pwd.js",
+        "node_modules/node-sass/node_modules/shelljs/src/rm.js",
+        "node_modules/node-sass/node_modules/shelljs/src/sed.js",
+        "node_modules/node-sass/node_modules/shelljs/src/tempdir.js",
+        "node_modules/node-sass/node_modules/shelljs/src/test.js",
+        "node_modules/node-sass/node_modules/shelljs/src/to.js",
+        "node_modules/node-sass/node_modules/shelljs/src/toEnd.js",
+        "node_modules/node-sass/node_modules/shelljs/src/which.js",
+        "node_modules/node-sass/scripts/build.js",
+        "node_modules/node-sass/scripts/coverage.js",
+        "node_modules/node-sass/scripts/install.js",
+        "node_modules/season/lib/cson.js",
+        "node_modules/season/lib/csonc.js",
+        "node_modules/season/node_modules/cson-safe/lib/cson-safe.js",
+        "node_modules/season/node_modules/cson-safe/lib/parse.js",
+        "node_modules/season/node_modules/cson-safe/lib/stringify.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/browser.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/cake.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/coffee-script.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/command.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/grammar.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/helpers.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/index.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/lexer.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/nodes.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/optparse.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/parser.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/register.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/repl.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/rewriter.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/scope.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script/sourcemap.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/node_modules/mkdirp/examples/pow.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/node_modules/mkdirp/index.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/register.js",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/repl.js",
+        "node_modules/season/node_modules/optimist/example/bool.js",
+        "node_modules/season/node_modules/optimist/example/boolean_double.js",
+        "node_modules/season/node_modules/optimist/example/boolean_single.js",
+        "node_modules/season/node_modules/optimist/example/default_hash.js",
+        "node_modules/season/node_modules/optimist/example/default_singles.js",
+        "node_modules/season/node_modules/optimist/example/divide.js",
+        "node_modules/season/node_modules/optimist/example/line_count.js",
+        "node_modules/season/node_modules/optimist/example/line_count_options.js",
+        "node_modules/season/node_modules/optimist/example/line_count_wrap.js",
+        "node_modules/season/node_modules/optimist/example/nonopt.js",
+        "node_modules/season/node_modules/optimist/example/reflect.js",
+        "node_modules/season/node_modules/optimist/example/short.js",
+        "node_modules/season/node_modules/optimist/example/string.js",
+        "node_modules/season/node_modules/optimist/example/usage-options.js",
+        "node_modules/season/node_modules/optimist/example/xup.js",
+        "node_modules/season/node_modules/optimist/index.js",
+        "node_modules/season/node_modules/optimist/node_modules/wordwrap/example/center.js",
+        "node_modules/season/node_modules/optimist/node_modules/wordwrap/example/meat.js",
+        "node_modules/season/node_modules/optimist/node_modules/wordwrap/index.js",
+        "node_modules/space-pen/lib/space-pen.js",
+        "node_modules/space-pen/node_modules/grim/lib/deprecation.js",
+        "node_modules/space-pen/node_modules/grim/lib/grim.js",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/lib/behavior.js",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/lib/emissary.js",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/lib/emitter.js",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/lib/helpers.js",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/lib/signal.js",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/lib/subscriber.js",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/lib/subscription.js",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/harmony-collections/harmony-collections.js",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/harmony-collections/harmony-collections.min.js",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/mixto/lib/mixin.js",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/property-accessors/lib/property-accessors.js",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/property-accessors/node_modules/harmony-collections/harmony-collections.js",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/property-accessors/node_modules/harmony-collections/harmony-collections.min.js",
+        "node_modules/space-pen/vendor/jquery.js",
+        "node_modules/underscore-plus/lib/underscore-plus.js",
+        "node_modules/underscore-plus/node_modules/underscore/underscore-min.js",
+        "node_modules/underscore-plus/node_modules/underscore/underscore.js"
+      ],
+      ".json": [
+        "node_modules/atom-space-pen-views/node_modules/fuzzaldrin/package.json",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/harmony-collections/package.json",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/mixto/package.json",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/property-accessors/node_modules/harmony-collections/package.json",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/property-accessors/package.json",
+        "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/package.json",
+        "node_modules/atom-space-pen-views/node_modules/grim/package.json",
+        "node_modules/atom-space-pen-views/package.json",
+        "node_modules/fs-plus/node_modules/async/component.json",
+        "node_modules/fs-plus/node_modules/async/package.json",
+        "node_modules/fs-plus/node_modules/mkdirp/package.json",
+        "node_modules/fs-plus/node_modules/rimraf/package.json",
+        "node_modules/fs-plus/package.json",
+        "node_modules/node-sass/node_modules/chalk/node_modules/ansi-styles/package.json",
+        "node_modules/node-sass/node_modules/chalk/node_modules/escape-string-regexp/package.json",
+        "node_modules/node-sass/node_modules/chalk/node_modules/has-ansi/node_modules/ansi-regex/package.json",
+        "node_modules/node-sass/node_modules/chalk/node_modules/has-ansi/package.json",
+        "node_modules/node-sass/node_modules/chalk/node_modules/strip-ansi/node_modules/ansi-regex/package.json",
+        "node_modules/node-sass/node_modules/chalk/node_modules/strip-ansi/package.json",
+        "node_modules/node-sass/node_modules/chalk/node_modules/supports-color/package.json",
+        "node_modules/node-sass/node_modules/chalk/package.json",
+        "node_modules/node-sass/node_modules/cross-spawn/node_modules/lru-cache/package.json",
+        "node_modules/node-sass/node_modules/cross-spawn/package.json",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob/node_modules/graceful-fs/package.json",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob/node_modules/inherits/package.json",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob/package.json",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/lodash/package.json",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/minimatch/node_modules/lru-cache/package.json",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/minimatch/node_modules/sigmund/package.json",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/minimatch/package.json",
+        "node_modules/node-sass/node_modules/gaze/node_modules/globule/package.json",
+        "node_modules/node-sass/node_modules/gaze/package.json",
+        "node_modules/node-sass/node_modules/get-stdin/package.json",
+        "node_modules/node-sass/node_modules/meow/node_modules/camelcase-keys/node_modules/camelcase/package.json",
+        "node_modules/node-sass/node_modules/meow/node_modules/camelcase-keys/node_modules/map-obj/package.json",
+        "node_modules/node-sass/node_modules/meow/node_modules/camelcase-keys/package.json",
+        "node_modules/node-sass/node_modules/meow/node_modules/indent-string/node_modules/repeating/node_modules/is-finite/package.json",
+        "node_modules/node-sass/node_modules/meow/node_modules/indent-string/node_modules/repeating/package.json",
+        "node_modules/node-sass/node_modules/meow/node_modules/indent-string/package.json",
+        "node_modules/node-sass/node_modules/meow/node_modules/minimist/package.json",
+        "node_modules/node-sass/node_modules/meow/package.json",
+        "node_modules/node-sass/node_modules/mkdirp/node_modules/minimist/package.json",
+        "node_modules/node-sass/node_modules/mkdirp/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/commander/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/debug/component.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/debug/node_modules/ms/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/debug/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/diff/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/escape-string-regexp/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/graceful-fs/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/inherits/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/lru-cache/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/minimatch/node_modules/sigmund/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/minimatch/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/glob/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/growl/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/node_modules/commander/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/node_modules/mkdirp/package.json",
+        "node_modules/node-sass/node_modules/mocha/node_modules/jade/package.json",
+        "node_modules/node-sass/node_modules/mocha/package.json",
+        "node_modules/node-sass/node_modules/nan/package.json",
+        "node_modules/node-sass/node_modules/object-assign/package.json",
+        "node_modules/node-sass/node_modules/replace-ext/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/aws-sign2/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/core-util-is/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/inherits/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/component.json",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/isarray/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/node_modules/string_decoder/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/bl/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/caseless/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/combined-stream/node_modules/delayed-stream/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/combined-stream/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/forever-agent/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/form-data/node_modules/async/component.json",
+        "node_modules/node-sass/node_modules/request/node_modules/form-data/node_modules/async/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/form-data/node_modules/mime-types/node_modules/mime-db/db.json",
+        "node_modules/node-sass/node_modules/request/node_modules/form-data/node_modules/mime-types/node_modules/mime-db/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/form-data/node_modules/mime-types/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/form-data/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/boom/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/cryptiles/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/hoek/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/sntp/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/hawk/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/asn1/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/assert-plus/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/float.json",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/int.json",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/psinfo.json",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/struct.json",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/node_modules/ctype/tst/ctf/typedef.json",
+        "node_modules/node-sass/node_modules/request/node_modules/http-signature/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/json-stringify-safe/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/mime-types/component.json",
+        "node_modules/node-sass/node_modules/request/node_modules/mime-types/lib/custom.json",
+        "node_modules/node-sass/node_modules/request/node_modules/mime-types/lib/mime.json",
+        "node_modules/node-sass/node_modules/request/node_modules/mime-types/lib/node.json",
+        "node_modules/node-sass/node_modules/request/node_modules/mime-types/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/node-uuid/component.json",
+        "node_modules/node-sass/node_modules/request/node_modules/node-uuid/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/oauth-sign/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/qs/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/stringstream/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/tough-cookie/node_modules/punycode/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/tough-cookie/package.json",
+        "node_modules/node-sass/node_modules/request/node_modules/tunnel-agent/package.json",
+        "node_modules/node-sass/node_modules/request/package.json",
+        "node_modules/node-sass/node_modules/shelljs/.documentup.json",
+        "node_modules/node-sass/node_modules/shelljs/package.json",
+        "node_modules/node-sass/package.json",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/node_modules/mkdirp/package.json",
+        "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/package.json",
+        "node_modules/season/node_modules/cson-safe/package.json",
+        "node_modules/season/node_modules/optimist/node_modules/wordwrap/package.json",
+        "node_modules/season/node_modules/optimist/package.json",
+        "node_modules/season/package.json",
+        "node_modules/space-pen/api.json",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/harmony-collections/package.json",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/mixto/package.json",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/property-accessors/node_modules/harmony-collections/package.json",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/property-accessors/package.json",
+        "node_modules/space-pen/node_modules/grim/node_modules/emissary/package.json",
+        "node_modules/space-pen/node_modules/grim/package.json",
+        "node_modules/space-pen/package.json",
+        "node_modules/underscore-plus/node_modules/underscore/package.json",
+        "node_modules/underscore-plus/package.json",
+        "package.json"
+      ],
+      ".node": [
+        "node_modules/node-sass/vendor/darwin-x64/binding.node"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "lib",
+          "",
+          "spec"
+        ],
+        "dependencies": {
+          "fs-plus": "^2.0.4",
+          "node-sass": "^1.2.3",
+          "space-pen": "^4",
+          "atom-space-pen-views": "^0",
+          "underscore-plus": "1.x",
+          "season": "^4"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/atom-space-pen-views/lib",
+          "node_modules/atom-space-pen-views"
+        ],
+        "dependencies": {
+          "fuzzaldrin": "^2.1.0",
+          "grim": "^0.12.0",
+          "space-pen": "^4.3.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/atom-space-pen-views/node_modules/grim/lib",
+          "node_modules/atom-space-pen-views/node_modules/grim"
+        ],
+        "dependencies": {
+          "underscore-plus": "^1.0.0",
+          "emissary": "^1.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/lib",
+          "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary"
+        ],
+        "dependencies": {
+          "underscore-plus": "1.x",
+          "mixto": "1.x",
+          "property-accessors": "^1.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/property-accessors/lib",
+          "node_modules/atom-space-pen-views/node_modules/grim/node_modules/emissary/node_modules/property-accessors"
+        ],
+        "dependencies": {
+          "mixto": "1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/fs-plus/lib",
+          "node_modules/fs-plus"
+        ],
+        "dependencies": {
+          "underscore-plus": "1.x",
+          "mkdirp": "~0.3.5",
+          "rimraf": "~2.2.2",
+          "async": "~0.2.9"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/lib",
+          "node_modules/node-sass",
+          "node_modules/node-sass/scripts",
+          "node_modules/node-sass/test",
+          "node_modules/node-sass/test/util",
+          "node_modules/node-sass/vendor/darwin-x64"
+        ],
+        "dependencies": {
+          "chalk": "^0.5.1",
+          "cross-spawn": "^0.2.3",
+          "gaze": "^0.5.1",
+          "get-stdin": "^3.0.0",
+          "meow": "^2.0.0",
+          "mkdirp": "^0.5.0",
+          "mocha": "^2.0.1",
+          "nan": "^1.3.0",
+          "object-assign": "^1.0.0",
+          "replace-ext": "0.0.1",
+          "request": "^2.48.0",
+          "shelljs": "^0.3.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/chalk"
+        ],
+        "dependencies": {
+          "ansi-styles": "^1.1.0",
+          "escape-string-regexp": "^1.0.0",
+          "has-ansi": "^0.1.0",
+          "strip-ansi": "^0.3.0",
+          "supports-color": "^0.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/chalk/node_modules/has-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^0.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/chalk/node_modules/strip-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^0.2.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/cross-spawn"
+        ],
+        "dependencies": {
+          "lru-cache": "^2.5.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/gaze/lib",
+          "node_modules/node-sass/node_modules/gaze"
+        ],
+        "dependencies": {
+          "globule": "~0.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/gaze/node_modules/globule",
+          "node_modules/node-sass/node_modules/gaze/node_modules/globule/lib",
+          "node_modules/node-sass/node_modules/gaze/node_modules/globule/test/fixtures/expand/js",
+          "node_modules/node-sass/node_modules/gaze/node_modules/globule/test"
+        ],
+        "dependencies": {
+          "lodash": "~1.0.1",
+          "glob": "~3.1.21",
+          "minimatch": "~0.2.11"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob/examples",
+          "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob",
+          "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/glob/test"
+        ],
+        "dependencies": {
+          "minimatch": "~0.2.11",
+          "graceful-fs": "~1.2.0",
+          "inherits": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/minimatch",
+          "node_modules/node-sass/node_modules/gaze/node_modules/globule/node_modules/minimatch/test"
+        ],
+        "dependencies": {
+          "lru-cache": "2",
+          "sigmund": "~1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/meow"
+        ],
+        "dependencies": {
+          "camelcase-keys": "^1.0.0",
+          "indent-string": "^1.1.0",
+          "minimist": "^1.1.0",
+          "object-assign": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/meow/node_modules/camelcase-keys"
+        ],
+        "dependencies": {
+          "camelcase": "^1.0.1",
+          "map-obj": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/meow/node_modules/indent-string"
+        ],
+        "dependencies": {
+          "get-stdin": "^3.0.0",
+          "minimist": "^1.1.0",
+          "repeating": "^1.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/meow/node_modules/indent-string/node_modules/repeating"
+        ],
+        "dependencies": {
+          "is-finite": "^1.0.0",
+          "meow": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/mkdirp/bin",
+          "node_modules/node-sass/node_modules/mkdirp/examples",
+          "node_modules/node-sass/node_modules/mkdirp",
+          "node_modules/node-sass/node_modules/mkdirp/test"
+        ],
+        "dependencies": {
+          "minimist": "0.0.8"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/mocha",
+          "node_modules/node-sass/node_modules/mocha/lib/browser",
+          "node_modules/node-sass/node_modules/mocha/lib",
+          "node_modules/node-sass/node_modules/mocha/lib/interfaces",
+          "node_modules/node-sass/node_modules/mocha/lib/reporters"
+        ],
+        "dependencies": {
+          "commander": "2.3.0",
+          "debug": "2.0.0",
+          "diff": "1.0.8",
+          "escape-string-regexp": "1.0.2",
+          "glob": "3.2.3",
+          "growl": "1.8.1",
+          "jade": "0.26.3",
+          "mkdirp": "0.5.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/mocha/node_modules/debug"
+        ],
+        "dependencies": {
+          "ms": "0.6.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/mocha/node_modules/glob/examples",
+          "node_modules/node-sass/node_modules/mocha/node_modules/glob",
+          "node_modules/node-sass/node_modules/mocha/node_modules/glob/test"
+        ],
+        "dependencies": {
+          "minimatch": "~0.2.11",
+          "graceful-fs": "~2.0.0",
+          "inherits": "2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/minimatch",
+          "node_modules/node-sass/node_modules/mocha/node_modules/glob/node_modules/minimatch/test"
+        ],
+        "dependencies": {
+          "lru-cache": "2",
+          "sigmund": "~1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/mocha/node_modules/jade",
+          "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib",
+          "node_modules/node-sass/node_modules/mocha/node_modules/jade/lib/nodes",
+          "node_modules/node-sass/node_modules/mocha/node_modules/jade/testing"
+        ],
+        "dependencies": {
+          "commander": "0.6.1",
+          "mkdirp": "0.3.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/request",
+          "node_modules/node-sass/node_modules/request/lib"
+        ],
+        "dependencies": {
+          "bl": "~0.9.0",
+          "caseless": "~0.8.0",
+          "forever-agent": "~0.5.0",
+          "form-data": "~0.2.0",
+          "json-stringify-safe": "~5.0.0",
+          "mime-types": "~1.0.1",
+          "node-uuid": "~1.4.0",
+          "qs": "~2.3.1",
+          "tunnel-agent": "~0.4.0",
+          "tough-cookie": ">=0.12.0",
+          "http-signature": "~0.10.0",
+          "oauth-sign": "~0.5.0",
+          "hawk": "1.1.1",
+          "aws-sign2": "~0.5.0",
+          "stringstream": "~0.0.4",
+          "combined-stream": "~0.0.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/request/node_modules/bl",
+          "node_modules/node-sass/node_modules/request/node_modules/bl/test"
+        ],
+        "dependencies": {
+          "readable-stream": "~1.0.26"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream",
+          "node_modules/node-sass/node_modules/request/node_modules/bl/node_modules/readable-stream/lib"
+        ],
+        "dependencies": {
+          "core-util-is": "~1.0.0",
+          "isarray": "0.0.1",
+          "string_decoder": "~0.10.x",
+          "inherits": "~2.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/request/node_modules/combined-stream/lib",
+          "node_modules/node-sass/node_modules/request/node_modules/combined-stream"
+        ],
+        "dependencies": {
+          "delayed-stream": "0.0.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/request/node_modules/form-data/lib",
+          "node_modules/node-sass/node_modules/request/node_modules/form-data"
+        ],
+        "dependencies": {
+          "async": "~0.9.0",
+          "combined-stream": "~0.0.4",
+          "mime-types": "~2.0.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/request/node_modules/form-data/node_modules/mime-types"
+        ],
+        "dependencies": {
+          "mime-db": "~1.5.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/request/node_modules/hawk/example",
+          "node_modules/node-sass/node_modules/request/node_modules/hawk",
+          "node_modules/node-sass/node_modules/request/node_modules/hawk/lib",
+          "node_modules/node-sass/node_modules/request/node_modules/hawk/test"
+        ],
+        "dependencies": {
+          "hoek": "0.9.x",
+          "boom": "0.4.x",
+          "cryptiles": "0.2.x",
+          "sntp": "0.2.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/boom",
+          "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/boom/lib",
+          "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/boom/test"
+        ],
+        "dependencies": {
+          "hoek": "0.9.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/cryptiles",
+          "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/cryptiles/lib",
+          "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/cryptiles/test"
+        ],
+        "dependencies": {
+          "boom": "0.4.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/sntp/examples",
+          "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/sntp",
+          "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/sntp/lib",
+          "node_modules/node-sass/node_modules/request/node_modules/hawk/node_modules/sntp/test"
+        ],
+        "dependencies": {
+          "hoek": "0.9.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/request/node_modules/http-signature/lib",
+          "node_modules/node-sass/node_modules/request/node_modules/http-signature"
+        ],
+        "dependencies": {
+          "assert-plus": "0.1.2",
+          "asn1": "0.1.11",
+          "ctype": "0.5.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/node-sass/node_modules/request/node_modules/tough-cookie",
+          "node_modules/node-sass/node_modules/request/node_modules/tough-cookie/lib"
+        ],
+        "dependencies": {
+          "punycode": ">=0.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/season/lib",
+          "node_modules/season"
+        ],
+        "dependencies": {
+          "cson-safe": "^1.0.1",
+          "fs-plus": "2.x",
+          "optimist": "~0.4.0",
+          "underscore-plus": "1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/season/node_modules/cson-safe/lib",
+          "node_modules/season/node_modules/cson-safe"
+        ],
+        "dependencies": {
+          "coffee-script": "^1.8.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/season/node_modules/cson-safe/node_modules/coffee-script/lib/coffee-script",
+          "node_modules/season/node_modules/cson-safe/node_modules/coffee-script"
+        ],
+        "dependencies": {
+          "mkdirp": "~0.3.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/season/node_modules/optimist/example",
+          "node_modules/season/node_modules/optimist",
+          "node_modules/season/node_modules/optimist/test/_",
+          "node_modules/season/node_modules/optimist/test"
+        ],
+        "dependencies": {
+          "wordwrap": "~0.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/space-pen",
+          "node_modules/space-pen/lib",
+          "node_modules/space-pen/vendor"
+        ],
+        "dependencies": {
+          "grim": "^0.12.0",
+          "underscore-plus": "1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/space-pen/node_modules/grim/lib",
+          "node_modules/space-pen/node_modules/grim"
+        ],
+        "dependencies": {
+          "underscore-plus": "^1.0.0",
+          "emissary": "^1.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/space-pen/node_modules/grim/node_modules/emissary/lib",
+          "node_modules/space-pen/node_modules/grim/node_modules/emissary"
+        ],
+        "dependencies": {
+          "underscore-plus": "1.x",
+          "mixto": "1.x",
+          "property-accessors": "^1.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/property-accessors/lib",
+          "node_modules/space-pen/node_modules/grim/node_modules/emissary/node_modules/property-accessors"
+        ],
+        "dependencies": {
+          "mixto": "1.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules/underscore-plus/lib",
+          "node_modules/underscore-plus"
+        ],
+        "dependencies": {
+          "underscore": "~1.6.0"
+        }
+      }
+    ]
+  }
+}

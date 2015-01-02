@@ -1,0 +1,36 @@
+{
+  "name": "language-sass",
+  "version": "0.29.0",
+  "description": "Sass/SCSS language support in Atom",
+  "license": "MIT",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "homepage": "http://atom.github.io/language-sass",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atom/language-sass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/atom/language-sass/issues"
+  },
+  "readme": "# Sass/SCSS language support in Atom [![Build Status](https://travis-ci.org/atom/language-sass.svg?branch=master)](https://travis-ci.org/atom/language-sass)\n\nAdds syntax highlighting and snippets to Sass/SCSS files in Atom.\n\nOriginally [converted](http://atom.io/docs/latest/converting-a-text-mate-bundle)\nfrom the [Sass TextMate bundle](https://github.com/alexsancho/SASS.tmbundle).\n\nContributions are greatly appreciated. Please fork this repository and open a\npull request to add snippets, make grammar tweaks, etc.\n",
+  "readmeFilename": "README.md",
+  "_id": "language-sass@0.29.0",
+  "dist": {
+    "shasum": "defa4f14e8d6a1cb0b76d26472ecf13c04981e4c"
+  },
+  "_resolved": "/private/var/folders/dy/fk5gyc5d26d9c6yt64s4ckz80000gn/T/d-11502-3984-1x5t95k/package.tgz",
+  "_from": "/private/var/folders/dy/fk5gyc5d26d9c6yt64s4ckz80000gn/T/d-11502-3984-1x5t95k/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
