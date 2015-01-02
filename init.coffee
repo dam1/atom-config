@@ -15,3 +15,5 @@
 
 
 atom.workspaceView.trigger 'filetype-color:toggle'
+atom.workspaceView.trigger 'filetype-color:toggle'
+atom.workspaceView.trigger 'filetype-color:toggle'

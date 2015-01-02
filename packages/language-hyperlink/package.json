@@ -1,0 +1,36 @@
+{
+  "name": "language-hyperlink",
+  "version": "0.12.2",
+  "description": "Hyperlink colorization in Atom",
+  "engines": {
+    "atom": "*",
+    "node": "*"
+  },
+  "homepage": "http://atom.github.io/language-hyperlink",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atom/language-hyperlink.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atom/language-hyperlink/issues"
+  },
+  "readme": "# Hyperlink colorization in Atom [![Build Status](https://travis-ci.org/atom/language-hyperlink.svg?branch=master)](https://travis-ci.org/atom/language-hyperlink)\n\nAdds syntax highlighting to hyperlinks embedded in strings, comments, and plain\ntext in Atom.\n\nOriginally [converted](http://atom.io/docs/latest/converting-a-text-mate-bundle)\nfrom the [Hyperlink Helper TextMate bundle](https://github.com/textmate/hyperlink-helper.tmbundle).\n\nContributions are greatly appreciated. Please fork this repository and open a\npull request to add snippets, make grammar tweaks, etc.\n",
+  "readmeFilename": "README.md",
+  "_id": "language-hyperlink@0.12.2",
+  "dist": {
+    "shasum": "c305e7c05db1fad29b2275baa0ed7ae389e9a72f"
+  },
+  "_resolved": "/private/var/folders/dy/fk5gyc5d26d9c6yt64s4ckz80000gn/T/d-11502-9482-j9i914/package.tgz",
+  "_from": "/private/var/folders/dy/fk5gyc5d26d9c6yt64s4ckz80000gn/T/d-11502-9482-j9i914/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}
